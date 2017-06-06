@@ -1,0 +1,6 @@
+name = Custom Top Services
+description = функции для вывода проектов в блок "топ проектов"
+core = 7.x
+
+core = "7.x"
+project = "custom_top_services"

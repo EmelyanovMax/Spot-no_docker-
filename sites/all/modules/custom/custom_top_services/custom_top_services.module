@@ -1,0 +1,109 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function custom_top_services_menu() {
+  $items['home'] = array(
+    'title' => 'Домашняя страница',
+    'page callback' => 'custom_top_services_home_page',
+    'access callback' => TRUE,
+  );
+  return $items;
+}
+
+function custom_top_services_home_page() {
+  return '';
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function custom_top_services_block_info() {
+  $blocks['custom_top_services'] = array(
+    'info' => t('Top services block'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function custom_top_services_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'custom_top_services':
+      $block['subject'] = t('Top services block');
+      $block['content'] = top_services_block_view();;
+      break;
+  }
+  return $block;
+}
+
+function top_services_block_view() {
+  $block = array();
+  $image_path = '';
+
+  $terms = taxonomy_get_tree(2);
+  foreach ($terms as $term) {
+    if ($term->depth === 0) {
+      $search_query = search_api_query('services');
+
+      $filter = $search_query->createFilter('AND');
+      $filter->condition('field_type:parent', $term->tid);
+      $filter->condition('votingapi', 0, '!=');
+
+      $search_query->filter($filter);
+
+      $data = $search_query->execute();
+      $services[] = $data['results'];
+    }
+  }
+  foreach ($services as $service) {
+    $nid = array_rand($service);
+    if (isset($nid)) {
+      $node = node_load($nid);
+
+      $services_type = taxonomy_get_parents($node->field_type['und'][0]['tid']);
+      $parent_tid = array_keys($services_type);
+      if (isset($node->field_logo['und'][0]['uri'])) {
+        $image_path = $node->field_logo['und'][0]['uri'];
+      }
+      $image = theme_image(array(
+        'path' => ($image_path),
+        'alt' => t('Картинка отсутствует'),
+        'attributes' => array('class' => 'class_name'),
+      ));
+      $markup = array(
+        'title' => array(
+          '#prefix' => '<div class="service-title">',
+          '#type' => 'markup',
+          '#markup' => $node->title,
+          '#suffix' => '</div>',
+        ),
+        'field_logo' => array(
+          '#prefix' => '<div class="service-logo">',
+          '#type' => 'markup',
+          '#markup' => $image,
+          '#suffix' => '</div>',
+        ),
+        'view_more' => array(
+          '#prefix' => '<div class="view-more">',
+          '#type' => 'markup',
+          '#markup' => '<a href="/node/' . $node->nid . '">смотерть больше</a>',
+          '#suffix' => '</div>',
+        ),
+      );
+      $block[$services_type[$parent_tid[0]]->name] = array(
+        '#prefix' => '<div class="service-wrapper">',
+        '#type' => 'markup',
+        '#markup' => drupal_render($markup),
+        '#suffix' => '</div>',
+      );
+    }
+  }
+  return $block;
+}

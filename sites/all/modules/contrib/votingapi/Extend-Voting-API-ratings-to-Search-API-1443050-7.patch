@@ -1,0 +1,56 @@
+From 4a607a03e8f2553cdf53187e686c14ef1624cdae Mon Sep 17 00:00:00 2001
+From: Kyle Taylor <kyletaylored@gmail.com>
+Date: Fri, 7 Feb 2014 10:40:50 -0600
+Subject: [PATCH] Extend Voting API ratings to Search API #1443050
+
+---
+ votingapi.module | 36 ++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+
+diff --git a/votingapi.module b/votingapi.module
+index e0c5125..63526be 100644
+--- a/votingapi.module
++++ b/votingapi.module
+@@ -658,3 +658,39 @@ function _votingapi_cron_delete_orphaned() {
+     $queue->deleteItem($item);
+   }
+ }
++
++function votingapi_entity_property_info_alter(&$info) {
++  $info['node']['properties']['votingapi'] = array(
++    'label' => t('Total votes'),
++    'description' => t('Total votes on a node'),
++    'getter callback' => 'votingapi_get_node_properties',
++    'type' => 'integer',
++  );
++  $info['node']['properties']['average'] = array(
++    'label' => t('Average votes'),
++    'description' => t('Average votes on a node'),
++    'getter callback' => 'votingapi_get_node_average',
++    'type' => 'integer',
++  );
++}
++
++/**
++ * Callback for getting votingapi related node properties.
++ */
++function votingapi_get_node_average($node, array $options, $name, $entity_type) {
++  switch ($name) {
++    case 'average':
++      return votingapi_select_single_result_value(array('entity_id' => $node->nid, 'function' => 'average',
++        'value_type' => 'percent'));
++  }
++}
++
++/**
++ * Callback for getting votingapi related node properties.
++ */
++function votingapi_get_node_properties($node, array $options, $name, $entity_type) {
++  switch ($name) {
++    case 'votingapi':
++      return votingapi_select_single_result_value(array('entity_id' => $node->nid));
++  }
++}
+--
+1.8.3.4 (Apple Git-47)
+

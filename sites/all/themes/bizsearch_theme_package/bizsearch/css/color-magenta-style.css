@@ -1,0 +1,240 @@
+﻿/* $Id: color-magenta-style.css,v 1.0.0 2013/09/25 08:18:15 symphonythemes Exp $ */
+/*------------------------------------*\
+	RESET
+\*------------------------------------*/
+
+a,
+a:link,
+a:visited {
+  color: #ff66b9;
+}
+a:hover { color: #ff9900; }
+
+.themecolor-text {
+  color: #ff66b9;
+}
+pre,
+div.code {
+  border-left: 5px solid #ff66b9;
+}
+.highlight {
+  background: #ff66b9;
+}
+blockquote::before {
+  color: #ff66b9;
+}
+
+h2.home-block-title:after,
+h2.block-title:after,
+.node-type-full-page h1.page-title:after {
+  background: #ff66b9;
+}
+.btn-success, .btn-primary,
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success,
+a.btn-default,
+.btn-default {
+  border-color: #ff66b9;
+  background-color: #ff66b9;
+  color: #fff;
+}
+.btn-border {
+  border-color: #ff66b9;
+  background: #fff;
+}
+a.btn-primary,
+.btn-primary {
+  background-color: #ff66b9;
+  border-color: #ff66b9;
+  color: #FFFFFF;
+}
+
+.extra-content {
+  background: rgba(255,102,185,0.8);
+}
+
+/*------------------------------------*\
+	Pages CSS
+\*------------------------------------*/
+
+#color-background-wrapper {
+  background: #ff66b9;
+}
+
+
+/*------------------------------------*\
+	NAVIGATION CSS
+\*------------------------------------*/
+li a.active {
+  color: #ff66b9;
+}
+
+
+#main-navigation li.active-trail a,
+#main-navigation li.active-trail span.nolink,
+#main-navigation li.open > a,
+#main-navigation li.open > span.nolink,
+#main-navigation li a.active,
+#main-navigation li a:hover,
+#main-navigation li a.current,
+#main-navigation li a.selected,
+#main-navigation li span.nolink:hover,
+#main-navigation li.active-trail span.nolink,
+#main-navigation li span.nolink.selected {
+  border-color: #ff66b9;
+}
+
+
+@media (max-width: 767px) {  
+  .navbar-collapse {
+	background:#ff66b9;
+  }
+  #main-navigation li:hover,
+  #main-navigation li.open,
+  #main-navigation li.active-trail a,
+  #main-navigation li.active-trail > span,
+  #main-navigation li a.active,
+  #main-navigation li a:hover,
+  #main-navigation li a.current,
+  #main-navigation li a.selected,
+  #main-navigation li > span:hover,
+  #main-navigation li.active-trail span,
+  #main-navigation li > span.selected {
+	border-color:rgba(255,255,255,.5);
+  }
+}
+/* Block user menu on top left */
+#header-top-left .block-menu ul.menu li a:hover,
+#header-top-left .block-menu ul.menu li a.active {
+  background: none;
+  color: #ff66b9;
+}
+
+
+/*------------------------------------*\
+	BUSINESS CSS
+\*------------------------------------*/
+/* Business List */
+#views-exposed-form-list-indexed-business-page .form-submit, #views-exposed-form-map-list-business-page-1 .form-submit {
+  background: #ff66b9;
+  border-color: #ff66b9;
+}
+.view-list-business .views-row .views-field-field-address i,
+.view-list-business .views-row .views-field-nothing i,
+.view-list-business .views-row .views-field-field-phone i,
+.view-list-business .views-row .views-field-field-website i {
+  color: #ff66b9;
+}
+
+fieldset.group-purchase-options {
+  background: #ff66b9;
+}
+.node-business .field-name-field-events > .field-label:after {
+  background: none repeat scroll 0 0 #ff66b9;
+}
+.node-business .content .field-collection-container .field.field-name-field-event-title {
+  color: #ff66b9;
+}
+.field-name-field-highlights .field-items .field-item:before {
+  color: #ff66b9;
+}
+.view-business-detail-sidebar .views-label:before {
+  color: #ff66b9;
+}
+
+/* Business List Grid */
+.view-list-business.view-list-business-grid .views-row .views-row-inner:hover {
+  border-color: #ff66b9;
+}
+
+/* Block Featured Biz */
+.slick--view--list-business .slide__content:hover {
+  border-color: #ff66b9
+}
+.block-featured-business a.slick-arrow:hover {
+  color: #ff66b9;
+  border-color: #ff66b9;
+}
+
+.block-featured-business .views-field-field-postaladdress-postal-code i,
+.block-featured-business .views-field-field-phone i {
+  color: #ff66b9;
+}
+
+/* Block Category */
+.block-featured-biz .views-row .information-group .field-title a:hover {
+  color: #ff66b9;
+}
+
+/* Business Category List */
+.list-categories .icon {
+  background: #ff66b9;
+}
+.view-categories .views-row .views-row-inner:hover .field-node-count span {
+  background: #ff66b9;
+  border: 2px solid #ff66b9;
+}
+.view-categories .views-row .views-row-inner:hover .field-title a {
+  color: #ff66b9;
+}
+
+.view-categories .views-row .views-row-inner .views-field-field-category-image .field-node-count {
+  background: rgba(141,194,123,0.8);
+}
+
+/* News */
+.view-list-news .views-field-title a:hover {
+  color: #ff66b9;
+}
+
+/* Member */
+.view-member .view-content {
+  background: #ff66b9;
+}
+
+/* Block Contact information */
+.block-contact-informations ul li i {
+  color: #ff66b9;
+}
+
+/* Block custom Why */
+.custom-block-why-item:hover i {
+  color: #ff66b9;
+  border-color: #ff66b9;
+}
+
+/* Sep boxed pricing */
+.sep-boxed-pricing ul li.footer-row a.button {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  color: #ff66b9;  
+}
+.sep-boxed-pricing ul li.footer-row a.button:hover {
+  background: #ff66b9;
+  color: #fafafa;  
+  border: 1px solid #ff66b9;
+}
+.sep-boxed-pricing ul li.title-row {
+  background: #9ed58b;
+  border-color: #9ed58b;
+}
+.sep-boxed-pricing ul li.pricing-row {
+  background: #ff66b9;
+  border-color: #a9e494 #ff66b9 #ff66b9;
+}
+.sep-boxed-pricing .price strong {
+  color: #000;
+}
+
+.price-comparison table thead th.col-featured {
+  background: #ff66b9;
+}
+.price-comparison a.button-sign-up {
+  background: #ff66b9;
+}
+.price-comparison a.button-sign-up:after {
+  border-color: transparent transparent #ff66b9 transparent;
+}
