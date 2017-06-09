@@ -54,6 +54,7 @@ function top_services_block_view() {
 
       $filter = $search_query->createFilter('AND');
       $filter->condition('field_type:parent', $term->tid);
+      $filter->condition('status', 1);
       $filter->condition('votingapi', 0, '!=');
 
       $search_query->filter($filter);

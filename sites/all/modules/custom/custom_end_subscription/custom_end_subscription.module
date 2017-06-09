@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Функция для отмены привелегий, когда заканчивается платная подписка
+ */
+
+// Устанавливаем правило для исполнения функции по расписанию
+
+/**
+ * Implements hook_cron().
+ */
+function custom_end_subscription_cron() {
+  $date = date('Y-m-d', strtotime('+1 day'));
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'user')
+    ->fieldCondition('field_end_subscribtion', 'value', $date, '<');
+  $result = $query->execute();
+
+  foreach ($result['user'] as $user) {
+    $uids[] = 1;
+//      $user->uid;
+  }
+//  $nodes_unpublish = db_query("UPDATE {node} SET status = :status WHERE uid IN (:uids)", array(
+//    ':status' => 0,
+//    ':uids' => $uids
+//  ));
+  foreach ($uids as $uid){
+    $query = new EntityFieldQuery();
+    $entities = $query->entityCondition('entity_type', 'node')
+      ->propertyCondition('uid', $uid)
+      ->propertyCondition('type', 'services')
+      ->propertyOrderBy('created', 'DESC')
+      ->execute();
+    $all_nids = array_keys($entities['node']);
+    $node = node_load($all_nids[0]);
+    $node->status = 1;
+    node_save($node);
+  }
+  $search = search_api_track_item_change('node', array($all_nids));
+}

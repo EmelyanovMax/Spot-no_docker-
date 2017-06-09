@@ -1,0 +1,6 @@
+name = Custom End Subscription
+description = функции при окончании платной подписки
+core = 7.x
+
+core = "7.x"
+project = "custom_end_subscription"
