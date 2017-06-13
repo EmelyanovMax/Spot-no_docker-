@@ -17,13 +17,12 @@ function custom_end_subscription_cron() {
   $result = $query->execute();
 
   foreach ($result['user'] as $user) {
-    $uids[] = 1;
-//      $user->uid;
+    $uids[] = $user->uid;
   }
-//  $nodes_unpublish = db_query("UPDATE {node} SET status = :status WHERE uid IN (:uids)", array(
-//    ':status' => 0,
-//    ':uids' => $uids
-//  ));
+  $nodes_unpublish = db_query("UPDATE {node} SET status = :status WHERE uid IN (:uids)", array(
+    ':status' => 0,
+    ':uids' => $uids
+  ));
   foreach ($uids as $uid){
     $query = new EntityFieldQuery();
     $entities = $query->entityCondition('entity_type', 'node')
