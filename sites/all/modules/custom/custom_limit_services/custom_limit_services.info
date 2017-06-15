@@ -1,0 +1,6 @@
+name = Custom Limit Services
+description = функции для учета количества созданных проектов
+core = 7.x
+
+core = "7.x"
+project = "custom_limit_services"

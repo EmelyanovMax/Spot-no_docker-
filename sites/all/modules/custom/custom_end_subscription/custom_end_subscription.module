@@ -1,10 +1,8 @@
 <?php
 
 /**
- * Функция для отмены привелегий, когда заканчивается платная подписка
+ * Функция для отмены привелегий, когда заканчивается платная подписка. Выполняется по расписанию
  */
-
-// Устанавливаем правило для исполнения функции по расписанию
 
 /**
  * Implements hook_cron().
@@ -13,11 +11,12 @@ function custom_end_subscription_cron() {
   $date = date('Y-m-d', strtotime('+1 day'));
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'user')
-    ->fieldCondition('field_end_subscribtion', 'value', $date, '<');
+    ->fieldCondition('field_end_subscription', 'value', $date, '<');
   $result = $query->execute();
 
   foreach ($result['user'] as $user) {
     $uids[] = $user->uid;
+    rules_invoke_event('subscription_ends', $user);
   }
   $nodes_unpublish = db_query("UPDATE {node} SET status = :status WHERE uid IN (:uids)", array(
     ':status' => 0,
@@ -36,4 +35,26 @@ function custom_end_subscription_cron() {
     node_save($node);
   }
   $search = search_api_track_item_change('node', array($all_nids));
+
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'user')
+    ->fieldCondition('field_end_subscription', 'value', $date, '>');
+  $result = $query->execute();
+  foreach ($result['user'] as $uid) {
+    $user = user_load($uid->uid);
+    $field_end_subscription = field_get_items('user', $user, 'field_end_subscription');
+    $days_remains = $field_end_subscription[0]['value'] - date('Y-m-d');
+    switch ($days_remains){
+      case '7':
+        rules_invoke_event('subscription_7_days_remains', $user);
+        break;
+      case '3':
+        rules_invoke_event('subscription_3_days_remains', $user);
+        break;
+      case '1':
+        rules_invoke_event('subscription_1_day_remains', $user);
+        break;
+    }
+    rules_invoke_event('subscription_ends', $user);
+  }
 }

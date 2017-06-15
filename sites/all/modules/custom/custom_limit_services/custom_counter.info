@@ -1,0 +1,6 @@
+name = Custom Counter
+description = функции для подсчета просмотров м посещений
+core = 7.x
+
+core = "7.x"
+project = "custom_counter"

@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * При сохранении или редактирования проекта проверяем количество доступных проектов для юзера
+ */
+
+/**
+ * Implements hook_node_presave().
+ */
+function custom_limit_services_node_presave($node) {
+  if ($node->type == 'services') {
+    $users_nodes = node_load_multiple(array(), array('uid' => $node->uid));
+    $count_nodes = count($users_nodes);
+    $user = user_load($node->uid);
+    $nodes_limit = field_get_items('user', $user, 'field_service_limit');
+    if ($count_nodes >= $nodes_limit[0]['value']) {
+      drupal_set_message('Лимит проектов исчерпан, если вы хотите увеличить лимит, то удалите старые проекты либо увеличьте лимит на странице подписки', 'error');
+      drupal_goto('/products');
+    }
+  }
+}
+
+/**
+ * После оплаты заказа сделать все ноды видимыми, если куплена подписка
+ */
+
+/**
+ * Implements hook_commerce_payment_order_paid_in_full().
+ */
+function custom_limit_services_commerce_payment_order_paid_in_full($order, $transaction) {
+  $product_type = array();
+  foreach ($order->commerce_line_items['und'] as $line) {
+    $line_item = commerce_line_item_load($line['line_item_id']);
+    $product_id = $line_item->commerce_product['und'];
+    $product = commerce_product_load($product_id);
+    $product_type[] = $product->type;
+  }
+  if (in_array('subscriptions', $product_type)) {
+    $nodes_publish = db_query("UPDATE {node} SET status = :status WHERE uid = :uid", array(
+      ':status' => 1,
+      ':uid' => $order->uid
+    ));
+  }
+}
