@@ -89,6 +89,5 @@ function _used_by_form_submit($form, &$form_state) {
   $node->field_used_by['und'][]['uid'] = $used_by_user->uid;
 
   drupal_set_message('Вы подтвердили, что воспользовались данной услугой');
-//    rules_invoke_event('send_lead_job_request', $used_by_user, $node);
   node_save($node);
 }
