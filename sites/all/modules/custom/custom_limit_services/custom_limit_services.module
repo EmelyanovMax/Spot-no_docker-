@@ -8,7 +8,7 @@
  * Implements hook_node_presave().
  */
 function custom_limit_services_node_presave($node) {
-  if ($node->type == 'services') {
+  if ($node->type == 'services' && !isset($node->nid)) {
     $users_nodes = node_load_multiple(array(), array('uid' => $node->uid));
     $count_nodes = count($users_nodes);
     $user = user_load($node->uid);
