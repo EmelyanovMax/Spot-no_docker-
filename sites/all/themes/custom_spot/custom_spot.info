@@ -42,10 +42,10 @@ regions[page_bottom]    		= 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-;stylesheets[all][] = ../bizsearch_theme_package/bootstrap/css/bootstrap.css
-;stylesheets[all][] = ../bizsearch_theme_package/css/style.css
-;stylesheets[all][] = ../bizsearch_theme_package/color/colors.css
-;stylesheets[all][] = ../bizsearch_theme_package/css/local.css
+;stylesheets[all][] = bootstrap/css/bootstrap.css
+stylesheets[all][] = css/style.css
+;stylesheets[all][] = color/colors.css
+;stylesheets[all][] = css/local.css
 
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:
