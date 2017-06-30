@@ -70,6 +70,8 @@ function top_services_block_view() {
 
       $services_type = taxonomy_get_parents($node->field_type['und'][0]['tid']);
       $parent_tid = array_keys($services_type);
+      $parent_name = $services_type[$parent_tid[0]]->name;
+      $field_cost = field_get_items('node', $node, 'field_cost');
       if (isset($node->field_logo['und'][0]['uri'])) {
         $image_path = $node->field_logo['und'][0]['uri'];
       }
@@ -85,10 +87,22 @@ function top_services_block_view() {
           '#markup' => $node->title,
           '#suffix' => '</div>',
         ),
+        'field_cost' => array(
+          '#prefix' => '<div class="service-field_cost">',
+          '#type' => 'markup',
+          '#markup' => $field_cost[0]['value'] . ' руб.',
+          '#suffix' => '</div>',
+        ),
         'field_logo' => array(
           '#prefix' => '<div class="service-logo">',
           '#type' => 'markup',
           '#markup' => $image,
+          '#suffix' => '</div>',
+        ),
+        'field_type_parent' => array(
+          '#prefix' => '<div class="service-field_type_parent">',
+          '#type' => 'markup',
+          '#markup' => $parent_name,
           '#suffix' => '</div>',
         ),
         'view_more' => array(

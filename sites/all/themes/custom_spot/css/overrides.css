@@ -1,0 +1,69 @@
+#block-system-user-menu li {
+  float: left;
+}
+#header-region {
+  float: right;
+}
+.region-header section {
+  float: left;
+}
+#block-commerce-cart-cart .content-wrapper {
+  padding: 25px 0;
+  line-height: 150%;
+}
+#content-top-first-wrapper .container {
+  width: 100%;
+}
+#content-top-first-wrapper .container .row {
+  margin: 0;
+}
+.block-custom-top-services h2.block-title {
+  margin: 0 auto;
+  width: 250px;
+  padding-bottom: 50px;
+  color: #2B2B2B;
+  font-size: 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+.block-custom-top-services .content-wrapper {
+  margin: 0 -15px;
+}
+.block-custom-top-services .service-wrapper {
+  position: relative;
+  float: left;
+  padding: 0 15px;
+  width: 20%;
+}
+.block-custom-top-services .service-logo {
+  height: 100%;
+  max-width: 250px;
+  width: 100%;
+}
+form#search-api-page-search-form-services > div {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding-right: 100px;
+}
+form#search-api-page-search-form-services > div button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+form#search-api-page-search-form-services {
+  margin: 0 auto;
+  width: 600px;
+}
+.front #page #content-top-second-wrapper:before {
+  display: none;
+}
+.front h2.block-title {
+  text-align-last: center;
+}
+.front p {
+  text-align-last: center;
+}
+.front .container {
+  width: 100%;
+}

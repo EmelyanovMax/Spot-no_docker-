@@ -43,7 +43,9 @@ regions[page_bottom]    		= 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;
 
 ;stylesheets[all][] = bootstrap/css/bootstrap.css
-stylesheets[all][] = css/style.css
+stylesheets[all][] = ../bizsearch_theme_package/bizsearch/css/style.css
+stylesheets[all][] = css/overrides.css
+
 ;stylesheets[all][] = color/colors.css
 ;stylesheets[all][] = css/local.css
 
