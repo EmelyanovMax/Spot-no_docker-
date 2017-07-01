@@ -19,7 +19,6 @@
 //End Menu
 
 #content-top-first-wrapper .container {
-  width: 100%;
   .row {
     margin: 0;
   }
@@ -44,10 +43,11 @@
     padding: 0 15px;
     width: 20%;
   }
-  .service-logo {
-    height: 100%;
+  .service-logo img {
+    max-height: 150px;
+    height: auto;
     max-width: 250px;
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -79,8 +79,27 @@ form#search-api-page-search-form-services {
   p {
     text-align-last: center;
   }
-  .container {
-    width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.view-all-services .views-row {
+  position: relative;
+  float: left;
+  padding: 15px 15px;
+  width: 33%;
+  height: auto;
+  .views-field-field-logo img {
+    max-height: 150px;
+    height: auto;
+    max-width: 250px;
+    width: auto;
   }
 }
 
+.pagination {
+  margin: 90px auto;
+  width: 500px;
+}
