@@ -122,3 +122,12 @@ function top_services_block_view() {
   }
   return $block;
 }
+
+  /**
+ * Implements hook_form_alter().
+ */
+function custom_top_services_form_alter(&$form, &$form_state, $form_id) {
+  if (strstr($form_id, 'commerce_cart_add_to_cart_form')) {
+    $form['submit']['#disabled'] = true;
+  }
+}

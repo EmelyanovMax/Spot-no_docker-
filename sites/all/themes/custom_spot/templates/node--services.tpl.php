@@ -21,33 +21,37 @@
       hide($content['comments']);
       hide($content['links']);
       hide($content['field_tags']); ?>
-        <div class="contact-info-wrapper col-md-3">
-          <?php print render($content['field_phone']);
-          print render($content['field_email']);
-          print render($content['field_date']);
-          print render($content['field_cost']);
-          print render($content['field_social_links']);
-          ?>
-        </div>
-        <div class="main-info-wrapper col-md-9">
-            <div class="title-wrapper">
-              <?php print render($content['field_logo']);
-              print render($title_prefix); ?>
-                <h2<?php print $title_attributes; ?>><a
-                            href="<?php print $node_url; ?>"><?php print $title; ?></a>
-                </h2>
-              <?php print render($title_suffix);
-              print render($used_by_form);
-              print render($content['field_used_by']);
-              print render($content['field_count_views']);
-              print render($content['field_rating']); ?>
-            </div>
-            <div class="body-wrapper">
-              <?php print render($content['body']);
+        <div class="field info-wrapper">
+            <div class="contact-info-wrapper col-md-4">
+              <?php print render($content['field_phone']);
+              print render($content['field_email']);
+              print render($content['field_date']);
+              print render($content['field_cost']);
+              print render($content['field_social_links']);
               ?>
             </div>
+            <div class="main-info-wrapper col-md-8">
+                <div class="title-wrapper">
+                  <?php print render($content['field_logo']);
+                  print render($title_prefix); ?>
+                    <h2<?php print $title_attributes; ?>><a
+                                href="<?php print $node_url; ?>"><?php print $title; ?></a>
+                    </h2>
+                  <?php print render($title_suffix);
+                  print render($used_by_form); ?>
+                    <div class="rating-wrapper">
+                      <?php
+                      print render($content['field_used_by']);
+                      print render($content['field_rating']);
+                      print render($content['field_count_views']); ?>
+                    </div>
+                </div>
+                <div class="body-wrapper">
+                  <?php print render($content['body']);
+                  ?>
+                </div>
+            </div>
         </div>
-
       <?php print render($content['field_photos']);
       print render($content['field_videos']);
       print render($content['field_faq']);
@@ -63,6 +67,6 @@
       </footer>
   <?php endif; ?>
 
-  <?php print render($content['comments']['comments']); ?>
+  <?php print render($content['comments']); ?>
 
 </article>

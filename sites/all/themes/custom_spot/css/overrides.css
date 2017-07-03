@@ -1,11 +1,31 @@
 #block-system-user-menu li {
   float: left;
 }
-#header-region {
+.region-header {
   float: right;
+  max-height: inherit;
 }
 .region-header section {
   float: left;
+}
+#logo img {
+  width: 50px;
+}
+#header-region {
+  background-color: black;
+  max-height: 70px;
+  width: 100%;
+}
+.header-menu-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.header-menu-wrapper #site-name {
+  padding: 20px 0 10px 20px;
+  float: left;
+}
+#header .col-md-12 {
+  padding: 0;
 }
 #block-commerce-cart-cart .content-wrapper {
   padding: 25px 0;
@@ -64,6 +84,7 @@ form#search-api-page-search-form-services {
 }
 .container {
   width: 100%;
+  padding: 0;
 }
 .view-all-services .views-row {
   position: relative;
@@ -81,4 +102,300 @@ form#search-api-page-search-form-services {
 .pagination {
   margin: 90px auto;
   width: 500px;
+}
+.content > .field {
+  clear: both;
+  width: 100%;
+}
+.node-services img {
+  max-height: 150px;
+  height: auto;
+  max-width: 250px;
+  width: auto;
+}
+.main-info-wrapper .title-wrapper {
+  height: 200px;
+}
+.title-wrapper .field-name-field-logo {
+  width: 250px;
+}
+.title-wrapper > .field {
+  float: left;
+  width: 25%;
+}
+.rating-wrapper > .field {
+  float: left;
+  width: 100px;
+  margin-top: 20px;
+  margin-right: 25px;
+}
+.title-wrapper h2 a {
+  float: left;
+  margin-right: 25px;
+}
+.contact-info-wrapper > .field {
+  margin-bottom: 20px;
+}
+.field-name-field-photos img {
+  margin: 20px 0;
+}
+.top-image #taxonomy-term-1 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-1 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-2 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-2 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-3 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-3 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-4 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-4 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-5 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-5 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-6 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-6 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-7 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-7 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-8 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-8 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-9 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-9 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-10 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-10 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-11 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-11 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-12 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-12 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-13 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-13 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-14 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-14 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-15 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-15 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-16 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-16 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-17 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-17 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-18 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-18 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-19 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-19 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-20 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-20 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-21 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-21 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-22 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-22 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-23 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-23 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-24 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-24 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-25 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-25 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
+}
+.top-image #taxonomy-term-26 {
+  background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
+  line-height: 400px;
+}
+.top-image #taxonomy-term-26 h2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fffefe;
+  padding: 3px 10px;
 }

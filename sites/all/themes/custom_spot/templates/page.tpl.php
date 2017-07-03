@@ -9,6 +9,8 @@
         <!-- #header-inside -->
         <div id="header-inside" class="clearfix">
             <div class="row">
+
+
                 <div class="col-md-12">
                     <!-- #header -->
                   <?php if ($page['header']) : ?>
@@ -17,7 +19,6 @@
                       </div>
                   <?php endif; ?>
                     <!-- EOF:#header -->
-
                     <div class="header-menu-wrapper">
                         <div class="col-md-3 clearfix">
 
@@ -160,237 +161,226 @@
           </div>
       </div>
   <?php endif; ?>
-  <?php if ($page['sidebar_first']): ?>
-    <div class="sidebar-first"
-    <aside class="<?php print $sidebar_first_grid_class; ?>">
-        <!--#sidebar-first-->
-        <section id="sidebar-first" class="sidebar clearfix">
-          <?php print render($page['sidebar_first']); ?>
-        </section>
-        <!--EOF:#sidebar-first-->
-    </aside>
-</div>
-<?php endif; ?>
-<!-- #main-content -->
-<div id="main-content">
-    <div class="container">
 
-        <!-- #messages-console -->
-      <?php if ($messages): ?>
-          <div id="messages-console" class="clearfix">
-              <div class="row">
-                  <div class="col-md-12">
-                    <?php print $messages; ?>
+    <!-- #main-content -->
+    <div id="main-content">
+        <div class="container">
+
+            <!-- #messages-console -->
+          <?php if ($messages): ?>
+              <div id="messages-console" class="clearfix">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <?php print $messages; ?>
+                      </div>
                   </div>
               </div>
-          </div>
-      <?php endif; ?>
-        <!-- EOF: #messages-console -->
+          <?php endif; ?>
+            <!-- EOF: #messages-console -->
 
-        <div class="row">
+            <div class="row">
 
-            <!--        --><?php //if ($page['sidebar_first']):?>
-            <!--          <aside class="-->
-          <?php //print $sidebar_first_grid_class; ?><!--">-->
-            <!--            <!--#sidebar-first-->-->
-            <!--            <section id="sidebar-first" class="sidebar clearfix">-->
-            <!--              --><?php //print render($page['sidebar_first']); ?>
-            <!--            </section>-->
-            <!--            <!--EOF:#sidebar-first-->-->
-            <!--          </aside>-->
-            <!--        --><?php //endif; ?>
+              <?php if ($page['sidebar_first']): ?>
+                  <aside class="<?php print $sidebar_first_grid_class; ?>">
+                      <!--#sidebar-first-->
+                      <section id="sidebar-first" class="sidebar clearfix">
+                        <?php print render($page['sidebar_first']); ?>
+                      </section>
+                      <!--EOF:#sidebar-first-->
+                  </aside>
+              <?php endif; ?>
 
 
-            <section class="<?php print $main_grid_class; ?>">
+                <section class="<?php print $main_grid_class; ?>">
 
-                <!-- #main -->
-                <div id="main" class="clearfix">
+                    <!-- #main -->
+                    <div id="main" class="clearfix">
 
-                  <?php if ($breadcrumb && theme_get_setting('breadcrumb_display')): ?>
-                      <!-- #breadcrumb -->
-                      <div id="breadcrumb" class="clearfix">
-                          <!-- #breadcrumb-inside -->
-                          <div id="breadcrumb-inside" class="clearfix">
-                            <?php print $breadcrumb; ?>
+                      <?php if ($breadcrumb && theme_get_setting('breadcrumb_display')): ?>
+                          <!-- #breadcrumb -->
+                          <div id="breadcrumb" class="clearfix">
+                              <!-- #breadcrumb-inside -->
+                              <div id="breadcrumb-inside" class="clearfix">
+                                <?php print $breadcrumb; ?>
+                              </div>
+                              <!-- EOF: #breadcrumb-inside -->
                           </div>
-                          <!-- EOF: #breadcrumb-inside -->
-                      </div>
-                      <!-- EOF: #breadcrumb -->
-                  <?php endif; ?>
-
-                    <!-- EOF:#content-wrapper -->
-
-                    <div id="content-wrapper">
-                      <?php print render($title_prefix); ?>
-                      <?php if ($title): ?>
-                          <h1 class="page-title"><?php print $title; ?></h1>
+                          <!-- EOF: #breadcrumb -->
                       <?php endif; ?>
-                      <?php print render($title_suffix); ?>
-                      <?php print render($page['help']); ?>
 
-                        <!-- #tabs -->
-                      <?php if ($tabs): ?>
-                          <div class="tabs">
-                            <?php print render($tabs); ?>
-                          </div>
-                      <?php endif; ?>
-                        <!-- EOF: #tabs -->
+                        <!-- EOF:#content-wrapper -->
 
-                        <!-- #action links -->
-                      <?php if ($action_links): ?>
-                          <ul class="action-links">
-                            <?php print render($action_links); ?>
-                          </ul>
-                      <?php endif; ?>
-                        <!-- EOF: #action links -->
+                        <div id="content-wrapper">
+                          <?php print render($title_prefix); ?>
+                          <?php if ($title): ?>
+                              <h1 class="page-title"><?php print $title; ?></h1>
+                          <?php endif; ?>
+                          <?php print render($title_suffix); ?>
+                          <?php print render($page['help']); ?>
 
-                      <?php print render($page['content']); ?>
-                      <?php print $feed_icons; ?>
+                            <!-- #tabs -->
+                          <?php if ($tabs): ?>
+                              <div class="tabs">
+                                <?php print render($tabs); ?>
+                              </div>
+                          <?php endif; ?>
+                            <!-- EOF: #tabs -->
+
+                            <!-- #action links -->
+                          <?php if ($action_links): ?>
+                              <ul class="action-links">
+                                <?php print render($action_links); ?>
+                              </ul>
+                          <?php endif; ?>
+                            <!-- EOF: #action links -->
+
+                          <?php print render($page['content']); ?>
+                          <?php print $feed_icons; ?>
+
+                        </div>
+
+                        <!-- EOF:#content-wrapper -->
+
 
                     </div>
+                    <!-- EOF:#main -->
 
-                    <!-- EOF:#content-wrapper -->
+                </section>
+
+              <?php if ($page['sidebar_second']): ?>
+                  <aside class="<?php print $sidebar_second_grid_class; ?>">
+                      <!--#sidebar-second-->
+                      <section id="sidebar-second" class="sidebar clearfix">
+                        <?php print render($page['sidebar_second']); ?>
+                      </section>
+                      <!--EOF:#sidebar-second-->
+                  </aside>
+              <?php endif; ?>
 
 
-                </div>
-                <!-- EOF:#main -->
+            </div>
+        </div>
+    </div>
+    <!-- EOF:#main-content -->
 
-            </section>
 
-          <?php if ($page['sidebar_second']): ?>
-              <aside class="<?php print $sidebar_second_grid_class; ?>">
-                  <!--#sidebar-second-->
-                  <section id="sidebar-second" class="sidebar clearfix">
-                    <?php print render($page['sidebar_second']); ?>
+    <!-- #Content Full width -->
+  <?php if ($page['content_full_width']): ?>
+      <div id="content-full-width-wrapper"
+           class="content-full-width-wrapper clearfix">
+        <?php print render($page['content_full_width']); ?>
+      </div>
+  <?php endif; ?>
+    <!-- EOF: #ContentFull width -->
+
+
+  <?php if ($page['image_background_first']): ?>
+      <!-- EOF:#image-background-wrapper -->
+      <div id="image-background-first-wrapper"
+           class="image-background-first-wrapper clearfix">
+          <div class="container">
+              <div class="row">
+                  <section id="image-background-first"
+                           class="col-md-12 image-background image-background-first clearfix">
+                    <?php print render($page['image_background_first']); ?>
                   </section>
-                  <!--EOF:#sidebar-second-->
-              </aside>
-          <?php endif; ?>
+              </div>
+          </div>
+      </div>
+      <!-- EOF:#image-background-wrapper -->
+  <?php endif; ?>
+
+  <?php if ($page['content_bottom_first']): ?>
+      <div id="content-bottom-first-wrapper" class="clearfix">
+          <div class="container">
+              <div class="row">
+                  <!-- EOF:#content-bottom-first-wrapper -->
+                  <section id="content-bottom-first"
+                           class="col-md-12 content-bottom-first clearfix">
+                    <?php print render($page['content_bottom_first']); ?>
+                  </section>
+                  <!-- EOF:#content-bottom-first-wrapper -->
+              </div>
+          </div>
+      </div>
+  <?php endif; ?>
 
 
-        </div>
-    </div>
-</div>
-<!-- EOF:#main-content -->
+  <?php if ($page['content_bottom_second']): ?>
+      <div id="content-bottom-second-wrapper" class="clearfix">
+          <div class="container">
+              <div class="row">
+                  <!-- EOF:#content-bottom-second-wrapper -->
+                  <section id="content-bottom-second"
+                           class="col-md-12 content-bottom-second clearfix">
+                    <?php print render($page['content_bottom_second']); ?>
+                  </section>
+                  <!-- EOF:#content-bottom-second-wrapper -->
+              </div>
+          </div>
+      </div>
+  <?php endif; ?>
 
+  <?php if ($page['content_bottom_third']): ?>
+      <div id="content-bottom-third-wrapper" class="clearfix">
+          <div class="container">
+              <div class="row">
+                  <!-- EOF:#content-bottom-third-wrapper -->
+                  <section id="content-bottom-third"
+                           class="col-md-12 content-bottom-third clearfix">
+                    <?php print render($page['content_bottom_third']); ?>
+                  </section>
+                  <!-- EOF:#content-bottom-third-wrapper -->
+              </div>
+          </div>
+      </div>
+  <?php endif; ?>
 
-<!-- #Content Full width -->
-<?php if ($page['content_full_width']): ?>
-    <div id="content-full-width-wrapper"
-         class="content-full-width-wrapper clearfix">
-      <?php print render($page['content_full_width']); ?>
-    </div>
-<?php endif; ?>
-<!-- EOF: #ContentFull width -->
+  <?php if ($page['content_bottom_fourth']): ?>
+      <div id="content-bottom-fourth-wrapper" class="clearfix">
+          <div class="container">
+              <div class="row">
+                  <!-- EOF:#content-bottom-fourth-wrapper -->
+                  <section id="content-bottom-fourth"
+                           class="col-md-12 content-bottom-fourth clearfix">
+                    <?php print render($page['content_bottom_fourth']); ?>
+                  </section>
+                  <!-- EOF:#content-bottom-fourth-wrapper -->
+              </div>
+          </div>
+      </div>
+  <?php endif; ?>
 
+  <?php if ($page['image_background_second']): ?>
+      <!-- EOF:#image-background-second-wrapper -->
+      <div id="image-background-second-wrapper"
+           class="image-background-wrapper image-background-second-wrapper clearfix">
+          <div class="container">
+              <div class="row">
+                  <section id="image-background-second"
+                           class="col-md-12 image-background clearfix">
+                    <?php print render($page['image_background_second']); ?>
+                  </section>
+              </div>
+          </div>
+      </div>
+      <!-- EOF:#image-background-second-wrapper -->
+  <?php endif; ?>
 
-<?php if ($page['image_background_first']): ?>
-    <!-- EOF:#image-background-wrapper -->
-    <div id="image-background-first-wrapper"
-         class="image-background-first-wrapper clearfix">
-        <div class="container">
-            <div class="row">
-                <section id="image-background-first"
-                         class="col-md-12 image-background image-background-first clearfix">
-                  <?php print render($page['image_background_first']); ?>
-                </section>
-            </div>
-        </div>
-    </div>
-    <!-- EOF:#image-background-wrapper -->
-<?php endif; ?>
-
-<?php if ($page['content_bottom_first']): ?>
-    <div id="content-bottom-first-wrapper" class="clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- EOF:#content-bottom-first-wrapper -->
-                <section id="content-bottom-first"
-                         class="col-md-12 content-bottom-first clearfix">
-                  <?php print render($page['content_bottom_first']); ?>
-                </section>
-                <!-- EOF:#content-bottom-first-wrapper -->
-            </div>
-        </div>
-    </div>
-<?php endif; ?>
-
-
-<?php if ($page['content_bottom_second']): ?>
-    <div id="content-bottom-second-wrapper" class="clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- EOF:#content-bottom-second-wrapper -->
-                <section id="content-bottom-second"
-                         class="col-md-12 content-bottom-second clearfix">
-                  <?php print render($page['content_bottom_second']); ?>
-                </section>
-                <!-- EOF:#content-bottom-second-wrapper -->
-            </div>
-        </div>
-    </div>
-<?php endif; ?>
-
-<?php if ($page['content_bottom_third']): ?>
-    <div id="content-bottom-third-wrapper" class="clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- EOF:#content-bottom-third-wrapper -->
-                <section id="content-bottom-third"
-                         class="col-md-12 content-bottom-third clearfix">
-                  <?php print render($page['content_bottom_third']); ?>
-                </section>
-                <!-- EOF:#content-bottom-third-wrapper -->
-            </div>
-        </div>
-    </div>
-<?php endif; ?>
-
-<?php if ($page['content_bottom_fourth']): ?>
-    <div id="content-bottom-fourth-wrapper" class="clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- EOF:#content-bottom-fourth-wrapper -->
-                <section id="content-bottom-fourth"
-                         class="col-md-12 content-bottom-fourth clearfix">
-                  <?php print render($page['content_bottom_fourth']); ?>
-                </section>
-                <!-- EOF:#content-bottom-fourth-wrapper -->
-            </div>
-        </div>
-    </div>
-<?php endif; ?>
-
-<?php if ($page['image_background_second']): ?>
-    <!-- EOF:#image-background-second-wrapper -->
-    <div id="image-background-second-wrapper"
-         class="image-background-wrapper image-background-second-wrapper clearfix">
-        <div class="container">
-            <div class="row">
-                <section id="image-background-second"
-                         class="col-md-12 image-background clearfix">
-                  <?php print render($page['image_background_second']); ?>
-                </section>
-            </div>
-        </div>
-    </div>
-    <!-- EOF:#image-background-second-wrapper -->
-<?php endif; ?>
-
-<?php if ($page['content_bottom_fifth']): ?>
-    <div id="content-bottom-fifth-wrapper" class="clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- EOF:#content-bottom-fifth-wrapper -->
-                <section id="content-bottom-fifth"
-                         class="col-md-12 content-bottom-fifth clearfix">
-                  <?php print render($page['content_bottom_fifth']); ?>
-                </section>
-                <!-- EOF:#content-bottom-fifth-wrapper -->
-            </div>
-        </div>
-    </div>
-<?php endif; ?>
+  <?php if ($page['content_bottom_fifth']): ?>
+      <div id="content-bottom-fifth-wrapper" class="clearfix">
+          <div class="container">
+              <div class="row">
+                  <!-- EOF:#content-bottom-fifth-wrapper -->
+                  <section id="content-bottom-fifth"
+                           class="col-md-12 content-bottom-fifth clearfix">
+                    <?php print render($page['content_bottom_fifth']); ?>
+                  </section>
+                  <!-- EOF:#content-bottom-fifth-wrapper -->
+              </div>
+          </div>
+      </div>
+  <?php endif; ?>
 
 </div>
 <!-- EOF:#page -->
