@@ -32,8 +32,7 @@
             </div>
             <div class="main-info-wrapper col-md-8">
                 <div class="title-wrapper">
-                  <?php print render($content['field_logo']);
-                  print render($title_prefix); ?>
+                  <?php print render($title_prefix); ?>
                     <h2<?php print $title_attributes; ?>><a
                                 href="<?php print $node_url; ?>"><?php print $title; ?></a>
                     </h2>
@@ -46,6 +45,7 @@
                       print render($content['field_count_views']); ?>
                     </div>
                 </div>
+              <?php print render($content['field_logo']); ?>
                 <div class="body-wrapper">
                   <?php print render($content['body']);
                   ?>

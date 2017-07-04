@@ -50,12 +50,18 @@
   position: relative;
   float: left;
   padding: 0 15px;
+  text-align: center;
   width: 20%;
+}
+.block-custom-top-services .service-logo {
+  text-align: center;
+  max-width: 250px;
+  padding: 10px 0;
 }
 .block-custom-top-services .service-logo img {
   max-height: 150px;
   height: auto;
-  max-width: 250px;
+  max-width: 100%;
   width: auto;
 }
 form#search-api-page-search-form-services > div {
@@ -83,27 +89,40 @@ form#search-api-page-search-form-services {
   text-align-last: center;
 }
 .container {
-  width: 100%;
   padding: 0;
 }
-.view-all-services .views-row {
+.views-row {
   position: relative;
   float: left;
   padding: 15px 15px;
   width: 33%;
   height: auto;
 }
-.view-all-services .views-row .views-field-field-logo img {
+.views-row .views-field-field-logo img {
   max-height: 150px;
   height: auto;
   max-width: 250px;
   width: auto;
 }
+.block-facetapi {
+  text-align: center;
+}
+#slider-facetapi-facet-search-apiservices-block-field-cost {
+  width: 70%;
+  margin: 0 auto;
+}
+#views-exposed-form-all-services-page-search--page {
+  width: 250px;
+  margin: 0 auto;
+}
 .pagination {
   margin: 90px auto;
   width: 500px;
 }
-.content > .field {
+.node .content {
+  padding: 20px 0;
+}
+.node .content > .field {
   clear: both;
   width: 100%;
 }
@@ -113,15 +132,29 @@ form#search-api-page-search-form-services {
   max-width: 250px;
   width: auto;
 }
-.main-info-wrapper .title-wrapper {
-  height: 200px;
-}
-.title-wrapper .field-name-field-logo {
-  width: 250px;
+.title-wrapper {
+  overflow: hidden;
+  width: 70%;
+  float: left;
 }
 .title-wrapper > .field {
   float: left;
   width: 25%;
+}
+.title-wrapper h2 {
+  margin: 0;
+}
+.title-wrapper h2 a {
+  float: left;
+  margin-right: 25px;
+}
+.field-name-field-logo {
+  overflow: hidden;
+  width: 30%;
+}
+.field-name-field-logo img {
+  max-width: 250px;
+  float: right;
 }
 .rating-wrapper > .field {
   float: left;
@@ -129,15 +162,25 @@ form#search-api-page-search-form-services {
   margin-top: 20px;
   margin-right: 25px;
 }
-.title-wrapper h2 a {
-  float: left;
-  margin-right: 25px;
-}
 .contact-info-wrapper > .field {
   margin-bottom: 20px;
 }
 .field-name-field-photos img {
   margin: 20px 0;
+}
+.body-wrapper {
+  clear: both;
+  padding-top: 20px;
+}
+.content .field-name-field-photos .field-items .field-item {
+  width: inherit;
+}
+.field-name-field-videos .field-item {
+  float: left;
+  margin: 20px 20px;
+}
+.field-name-field-videos .field-item iframe {
+  max-width: 480px;
 }
 .top-image #taxonomy-term-1 {
   background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
