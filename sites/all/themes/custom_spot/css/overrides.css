@@ -104,6 +104,9 @@ form#search-api-page-search-form-services {
   max-width: 250px;
   width: auto;
 }
+.view-all-services .views-row:nth-child(3n+1) {
+  clear: left;
+}
 .block-facetapi {
   text-align: center;
 }
@@ -118,6 +121,7 @@ form#search-api-page-search-form-services {
 .pagination {
   margin: 90px auto;
   width: 500px;
+  float: right;
 }
 .node .content {
   padding: 20px 0;
@@ -181,9 +185,6 @@ form#search-api-page-search-form-services {
 }
 .field-name-field-videos .field-item iframe {
   max-width: 480px;
-}
-.view-all-services .views-row:nth-child(3n+1) {
-  clear: left;
 }
 .top-image #taxonomy-term-1 {
   background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
