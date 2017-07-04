@@ -182,6 +182,9 @@ form#search-api-page-search-form-services {
 .field-name-field-videos .field-item iframe {
   max-width: 480px;
 }
+.view-all-services .views-row:nth-child(3n+1) {
+  clear: left;
+}
 .top-image #taxonomy-term-1 {
   background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
   line-height: 400px;
