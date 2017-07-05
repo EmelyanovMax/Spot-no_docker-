@@ -4,7 +4,7 @@
 function custom_spot_preprocess_node(&$variables) {
   $url = request_uri();
   $variables['content']['field_cost'][0]['#markup'] .= ' руб.';
-  $variables['comment_button'] = '<a href="' . $url . '#comments" class="btn btn-default">Комментарии</a>';
+  $variables['comment_button'] = '<a href="' . $url . '#comments" class="btn btn-default">Отзывы и коментарии</a>';
 
   $user = user_load($variables['uid']);
   if (in_array('company', $user->roles)) {

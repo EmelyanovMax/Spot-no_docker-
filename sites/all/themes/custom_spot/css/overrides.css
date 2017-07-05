@@ -95,6 +95,9 @@ form#search-api-page-search-form-services {
 .container {
   padding: 0;
 }
+body.html {
+  background: white;
+}
 .views-row {
   position: relative;
   float: left;
