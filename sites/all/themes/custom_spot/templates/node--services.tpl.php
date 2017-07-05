@@ -25,9 +25,11 @@
             <div class="contact-info-wrapper col-md-4">
               <?php print render($content['field_phone']);
               print render($content['field_email']);
+              print render($content['field_address']);
               print render($content['field_date']);
               print render($content['field_cost']);
               print render($content['field_social_links']);
+              print $comment_button
               ?>
             </div>
             <div class="main-info-wrapper col-md-8">
@@ -55,7 +57,6 @@
       <?php print render($content['field_photos']);
       print render($content['field_videos']);
       print render($content['field_faq']);
-      print render($content['field_address']);
       print render($content['field_geofield']);
       ?>
     </div>

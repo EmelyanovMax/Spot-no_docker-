@@ -118,7 +118,6 @@ form#search-api-page-search-form-services {
   float: right;
 }
 
-
 //End views
 
 //Services page
@@ -165,15 +164,28 @@ form#search-api-page-search-form-services {
   }
 }
 
-.rating-wrapper > .field {
-  float: left;
-  width: 100px;
-  margin-top: 20px;
-  margin-right: 25px;
+.rating-wrapper {
+  clear: both;
+  > .field {
+    float: left;
+    width: 100px;
+    margin-top: 20px;
+    margin-right: 25px;
+  }
 }
 
-.contact-info-wrapper > .field {
-  margin-bottom: 20px;
+.main-info-wrapper {
+  padding: 0;
+}
+
+.contact-info-wrapper {
+  padding: 0;
+  .field-item {
+    font-size: 18px;
+  }
+  > .field {
+    margin-bottom: 20px;
+  }
 }
 
 .field-name-field-photos img {
@@ -191,10 +203,15 @@ form#search-api-page-search-form-services {
 
 .field-name-field-videos .field-item {
   float: left;
-  margin: 20px 20px;
+  margin-top: 20px;
+  margin-right: 20px;
   iframe {
     max-width: 480px;
   }
+}
+#comments {
+  clear: both;
+  padding: 15px 0;
 }
 
 //End service page

@@ -91,3 +91,16 @@ function _used_by_form_submit($form, &$form_state) {
   drupal_set_message('Вы подтвердили, что воспользовались данной услугой');
   node_save($node);
 }
+
+// Редирект на форму логин, если незарегистрированный пользователь хочет добавить новый проект
+/**
+ * Implements hook_init().
+ */
+function custom_counter_init() {
+  global $user;
+  $url = request_uri();
+  if ($url == '/node/add/services' && in_array('anonymous user', $user->roles)) {
+    drupal_set_message(t('Вам необходимо войти на сайт или зарегистрироваться, чтобы добавить новый проект'), 'warning', FALSE);
+    drupal_goto('user/login');
+  }
+}

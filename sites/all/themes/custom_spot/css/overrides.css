@@ -1,3 +1,6 @@
+#header .container {
+  width: 100%;
+}
 #block-system-user-menu li {
   float: left;
 }
@@ -17,7 +20,8 @@
   width: 100%;
 }
 .header-menu-wrapper {
-  width: 100%;
+  width: 1200px;
+  margin: 0 auto;
   overflow: hidden;
 }
 .header-menu-wrapper #site-name {
@@ -160,11 +164,23 @@ form#search-api-page-search-form-services {
   max-width: 250px;
   float: right;
 }
+.rating-wrapper {
+  clear: both;
+}
 .rating-wrapper > .field {
   float: left;
   width: 100px;
   margin-top: 20px;
   margin-right: 25px;
+}
+.main-info-wrapper {
+  padding: 0;
+}
+.contact-info-wrapper {
+  padding: 0;
+}
+.contact-info-wrapper .field-item {
+  font-size: 18px;
 }
 .contact-info-wrapper > .field {
   margin-bottom: 20px;
@@ -181,10 +197,15 @@ form#search-api-page-search-form-services {
 }
 .field-name-field-videos .field-item {
   float: left;
-  margin: 20px 20px;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 .field-name-field-videos .field-item iframe {
   max-width: 480px;
+}
+#comments {
+  clear: both;
+  padding: 15px 0;
 }
 .top-image #taxonomy-term-1 {
   background-image: url("/sites/default/files/services-types/taxonomy_23.jpg");
