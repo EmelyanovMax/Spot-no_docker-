@@ -128,6 +128,8 @@ function top_services_block_view() {
  */
 function custom_top_services_form_alter(&$form, &$form_state, $form_id) {
   if (strstr($form_id, 'commerce_cart_add_to_cart_form')) {
+
+
     $form['submit']['#disabled'] = true;
   }
 }
