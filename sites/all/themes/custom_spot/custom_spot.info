@@ -31,7 +31,6 @@ regions[footer_second] 			= Footer Second
 regions[footer_third] 			= Footer Third
 regions[footer_fourth] 			= Footer Fourth
 regions[footer_fifth] 			= Footer Fifth
-regions[footer_sixth] 			= Footer Sixth
 regions[sub_footer_first] 		= Sub Footer First
 regions[sub_footer_second] 		= Sub Footer Second
 regions[page_top]       		= 'Page top'

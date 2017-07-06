@@ -1,3 +1,36 @@
+#main-content {
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+.node-type-services {
+  .container {
+    width: 100%;
+  }
+  .node {
+    .content, footer, #comments {
+      padding: 20px 300px;
+    }
+  }
+}
+
+html body.html {
+  background: white !important;
+}
+
+.btn-default,
+.btn-primary,
+.btn-success {
+  background-color: #35AA4B;
+}
+
+a {
+  color: #35AA4B;
+}
+
 //Frontpage
 
 #content-top-first-wrapper .container {
@@ -70,14 +103,6 @@ form#search-api-page-search-form-services {
 }
 
 //End frontpage
-
-.container {
-  padding: 0;
-}
-
-html body.html {
-  background: white !important;
-}
 
 // Views
 .views-row {
@@ -187,8 +212,13 @@ html body.html {
   }
 }
 
-.field-name-field-photos img {
-  margin: 20px 0;
+.field-name-field-photos {
+  .field-items {
+    text-align: center;
+  }
+  img {
+    margin: 20px 0;
+  }
 }
 
 .body-wrapper {
@@ -200,12 +230,18 @@ html body.html {
   width: inherit;
 }
 
-.field-name-field-videos .field-item {
-  float: left;
-  margin-top: 20px;
-  margin-right: 20px;
-  iframe {
-    max-width: 480px;
+.field-name-field-videos {
+  .field-items {
+    text-align: center;
+  }
+  .field-item {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 20px;
+    vertical-align: top;
+    iframe {
+      max-width: 480px;
+    }
   }
 }
 

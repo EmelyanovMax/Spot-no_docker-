@@ -410,7 +410,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <?php if ($page['footer_second']): ?>
                           <div class="footer-second">
                             <?php print render($page['footer_second']); ?>
@@ -418,7 +418,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <?php if ($page['footer_third']): ?>
                           <div class="footer-third">
                             <?php print render($page['footer_third']); ?>
@@ -426,7 +426,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <?php if ($page['footer_fourth']): ?>
                           <div class="footer-fourth">
                             <?php print render($page['footer_fourth']); ?>
@@ -434,7 +434,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                       <?php if ($page['footer_fifth']): ?>
                           <div class="footer-fifth">
                             <?php print render($page['footer_fifth']); ?>
@@ -445,22 +445,6 @@
             </div>
             <!-- EOF: #footer-inside -->
         </div>
-        <div id="footer-sixth">
-            <div class="container">
-                <!-- #footer-inside -->
-                <div class="row">
-                    <div class="col-md-12">
-                      <?php if ($page['footer_sixth']): ?>
-                          <div class="footer-sixth">
-                            <?php print render($page['footer_sixth']); ?>
-                          </div>
-                      <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-            <!-- EOF: #footer-inside -->
-        </div>
-
     </footer>
     <!-- EOF #footer -->
 <?php endif; ?>

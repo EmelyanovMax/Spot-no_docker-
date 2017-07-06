@@ -1,10 +1,16 @@
 //Menu
-#header .container{
-  width: 100%;
+#header {
+  .col-md-12 {
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+  }
 }
 
 #block-system-user-menu li {
   float: left;
+  padding: 0;
 }
 
 .region-header {
@@ -12,6 +18,7 @@
   max-height: inherit;
   section {
     float: left;
+    margin: 0;
   }
 }
 
@@ -21,7 +28,8 @@
 
 #header-region {
   background-color: black;
-  max-height: 70px;
+  padding-right: 25px;
+  height: 50px;
   width: 100%;
 }
 
@@ -29,19 +37,22 @@
   width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  #site-name{
+  #site-name {
     padding: 20px 0 10px 20px;
     float: left;
   }
 }
 
-#header .col-md-12 {
+#block-commerce-cart-cart .content-wrapper {
   padding: 0;
+  line-height: 150%;
+  > div {
+    padding: 10px 15px;
+  }
 }
 
-#block-commerce-cart-cart .content-wrapper {
-  padding: 25px 0;
-  line-height: 150%;
+#main-navigation li.active-trail a, #main-navigation li.active-trail span.nolink, #main-navigation li.open > a, #main-navigation li.open > span.nolink, #main-navigation li a.active, #main-navigation li a:hover, #main-navigation li a.current, #main-navigation li a.selected, #main-navigation li span.nolink:hover, #main-navigation li.active-trail span.nolink, #main-navigation li span.nolink.selected {
+  border-bottom: 2px solid #35AA4B;
 }
 
 //End Menu
