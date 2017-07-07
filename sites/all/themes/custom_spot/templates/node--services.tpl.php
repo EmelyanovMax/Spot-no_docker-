@@ -29,7 +29,7 @@
               print render($content['field_date']);
               print render($content['field_cost']);
               print render($content['field_social_links']);
-              print $comment_button
+              print $comment_button;
               ?>
             </div>
             <div class="main-info-wrapper col-md-8">

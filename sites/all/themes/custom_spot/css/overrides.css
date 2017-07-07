@@ -60,14 +60,6 @@
 .container {
   padding: 0;
 }
-.node-type-services .container {
-  width: 100%;
-}
-.node-type-services .node .content,
-.node-type-services .node footer,
-.node-type-services .node #comments {
-  padding: 20px 300px;
-}
 html body.html {
   background: white !important;
 }
@@ -193,6 +185,9 @@ form#search-api-page-search-form-services {
   float: left;
   margin-right: 25px;
 }
+.field-name-field-social-links .field-item {
+  float: left;
+}
 .field-name-field-logo {
   overflow: hidden;
   width: 30%;
@@ -220,26 +215,40 @@ form#search-api-page-search-form-services {
   font-size: 18px;
 }
 .contact-info-wrapper > .field {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
-.field-name-field-photos .field-items {
-  text-align: center;
-}
-.field-name-field-photos img {
-  margin: 20px 0;
+.contact-info-wrapper .comments-button {
+  clear: left;
+  padding-top: 15px;
 }
 .body-wrapper {
   clear: both;
   padding-top: 20px;
 }
+.field-name-field-photos .mfp-nogallery-image {
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+}
+.field-name-field-photos .mfp-nogallery-image a {
+  display: block;
+  float: left;
+  margin: 10px 10px;
+}
 .content .field-name-field-photos .field-items .field-item {
-  width: inherit;
+  width: 100%;
 }
 .field-name-field-videos .field-items {
-  text-align: center;
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+}
+.field-name-field-videos .even {
+  clear: left;
 }
 .field-name-field-videos .field-item {
-  display: inline-block;
+  display: block;
+  float: left;
   margin-top: 20px;
   margin-right: 20px;
   vertical-align: top;
