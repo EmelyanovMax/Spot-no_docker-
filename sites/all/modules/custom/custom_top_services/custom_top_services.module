@@ -123,13 +123,22 @@ function top_services_block_view() {
   return $block;
 }
 
-  /**
+/**
  * Implements hook_form_alter().
  */
 function custom_top_services_form_alter(&$form, &$form_state, $form_id) {
   if (strstr($form_id, 'commerce_cart_add_to_cart_form')) {
-
-
-    $form['submit']['#disabled'] = true;
+    if ($form_id == 'commerce_cart_add_to_cart_form_6') {
+      $form['#submit'][0] = '_three_month_subscribe';
+      $form['submit']['#value'] = 'Try for free';
+    }
+    else {
+      $form['submit']['#disabled'] = TRUE;
+    }
   }
+}
+
+function _three_month_subscribe($form, &$form_state) {
+  $user = user_load($form_state['values']['uid']);
+  rules_invoke_event('three_month_subscription', $user);
 }

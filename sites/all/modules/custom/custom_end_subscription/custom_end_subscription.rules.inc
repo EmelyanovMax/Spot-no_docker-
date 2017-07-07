@@ -77,5 +77,17 @@ function custom_end_subscription_rules_event_info() {
       ),
     ),
 
+    'three_month_subscription' => array(
+      'label' => t('3 month Subscription'),
+      'module' => 'custom_end_subscription',
+      'group' => t('Custom'),
+      'variables' => array(
+        'current_user' => array(
+          'type' => 'user',
+          'label' => t('The current logged in user.')
+        ),
+      ),
+    ),
+
   );
 }
