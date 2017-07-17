@@ -20,7 +20,7 @@
                   <?php endif; ?>
                     <!-- EOF:#header -->
                     <div class="header-menu-wrapper">
-                        <div class="col-md-3 clearfix">
+                        <div class="col-sm-3 clearfix">
 
                           <?php if ($logo): ?>
                               <div id="logo">
@@ -48,7 +48,7 @@
 
                         </div>
                         <!-- Main Menu -->
-                        <div id="main-menu" class="col-md-9">
+                        <div id="main-menu" class="col-sm-9">
                             <div class="navbar">
                                 <div id="navbar-mainmenu-collapse">
                                     <nav id="main-navigation" class="">
@@ -400,7 +400,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                       <?php if ($page['footer_second']): ?>
                           <div class="footer-second">
                             <?php print render($page['footer_second']); ?>
@@ -408,7 +408,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                       <?php if ($page['footer_third']): ?>
                           <div class="footer-third">
                             <?php print render($page['footer_third']); ?>
@@ -416,7 +416,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                       <?php if ($page['footer_fourth']): ?>
                           <div class="footer-fourth">
                             <?php print render($page['footer_fourth']); ?>

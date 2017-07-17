@@ -8,7 +8,7 @@
 
         <!-- #header-inside -->
         <div id="header-inside" class="clearfix">
-            <div class="row">
+            <div>
                 <div class="col-md-12">
                     <!-- #header -->
                   <?php if ($page['header']) : ?>
@@ -19,7 +19,7 @@
                     <!-- EOF:#header -->
 
                     <div class="header-menu-wrapper">
-                        <div class="col-md-3 clearfix">
+                        <div class="col-sm-3 clearfix">
 
                           <?php if ($logo): ?>
                               <div id="logo">
@@ -47,8 +47,14 @@
 
                         </div>
                         <!-- Main Menu -->
-                        <div id="main-menu" class="col-md-9">
-                            <div class="navbar">
+                        <div id="main-menu" class="col-sm-9">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div id="navbar" class="navbar-collapse collapse">
                                 <div id="navbar-mainmenu-collapse">
                                     <nav id="main-navigation" class="">
                                       <?php if ($page['main_navigation']) : ?>
@@ -89,7 +95,7 @@
 <?php if ($page['search']) : ?>
     <div id="search-wrapper" class="clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <div class="col-md-12">
                     <div id="search-region" class="clearfix">
                         <div id="navbar-search-collapse">
@@ -119,7 +125,7 @@
   <?php if ($page['content_top_first']): ?>
       <div id="content-top-first-wrapper" class="clearfix">
           <div class="container">
-              <div class="row">
+              <div>
                   <!-- EOF:#content-top-first-wrapper -->
                   <section id="content-top-first"
                            class="col-md-12 content-top-first clearfix">
@@ -134,7 +140,7 @@
   <?php if ($page['content_top_second']): ?>
       <div id="content-top-second-wrapper" class="clearfix">
           <div class="container">
-              <div class="row">
+              <div>
                   <!-- EOF:#content-top-second-wrapper -->
                   <section id="content-top-second"
                            class="col-md-12 content-top-second clearfix">
@@ -149,7 +155,7 @@
   <?php if ($page['content_top_third']): ?>
       <div id="content-top-third-wrapper" class="clearfix">
           <div class="container">
-              <div class="row">
+              <div>
                   <!-- EOF:#content-top-third-wrapper -->
                   <section id="content-top-third"
                            class="col-md-12 content-top-third clearfix">
@@ -178,7 +184,7 @@
         <!-- #messages-console -->
       <?php if ($messages): ?>
           <div id="messages-console" class="clearfix">
-              <div class="row">
+              <div>
                   <div class="col-md-12">
                     <?php print $messages; ?>
                   </div>
@@ -187,7 +193,7 @@
       <?php endif; ?>
         <!-- EOF: #messages-console -->
 
-        <div class="row">
+        <div>
 
             <!--        --><?php //if ($page['sidebar_first']):?>
             <!--          <aside class="-->
@@ -289,7 +295,7 @@
     <div id="image-background-first-wrapper"
          class="image-background-first-wrapper clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <section id="image-background-first"
                          class="col-md-12 image-background image-background-first clearfix">
                   <?php print render($page['image_background_first']); ?>
@@ -303,7 +309,7 @@
 <?php if ($page['content_bottom_first']): ?>
     <div id="content-bottom-first-wrapper" class="clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <!-- EOF:#content-bottom-first-wrapper -->
                 <section id="content-bottom-first"
                          class="col-md-12 content-bottom-first clearfix">
@@ -319,7 +325,7 @@
 <?php if ($page['content_bottom_second']): ?>
     <div id="content-bottom-second-wrapper" class="clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <!-- EOF:#content-bottom-second-wrapper -->
                 <section id="content-bottom-second"
                          class="col-md-12 content-bottom-second clearfix">
@@ -334,7 +340,7 @@
 <?php if ($page['content_bottom_third']): ?>
     <div id="content-bottom-third-wrapper" class="clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <!-- EOF:#content-bottom-third-wrapper -->
                 <section id="content-bottom-third"
                          class="col-md-12 content-bottom-third clearfix">
@@ -349,7 +355,7 @@
 <?php if ($page['content_bottom_fourth']): ?>
     <div id="content-bottom-fourth-wrapper" class="clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <!-- EOF:#content-bottom-fourth-wrapper -->
                 <section id="content-bottom-fourth"
                          class="col-md-12 content-bottom-fourth clearfix">
@@ -366,7 +372,7 @@
     <div id="image-background-second-wrapper"
          class="image-background-wrapper image-background-second-wrapper clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <section id="image-background-second"
                          class="col-md-12 image-background clearfix">
                   <?php print render($page['image_background_second']); ?>
@@ -380,7 +386,7 @@
 <?php if ($page['content_bottom_fifth']): ?>
     <div id="content-bottom-fifth-wrapper" class="clearfix">
         <div class="container">
-            <div class="row">
+            <div>
                 <!-- EOF:#content-bottom-fifth-wrapper -->
                 <section id="content-bottom-fifth"
                          class="col-md-12 content-bottom-fifth clearfix">
@@ -401,7 +407,7 @@
         <div class="container">
             <!-- #footer-inside -->
             <div id="footer-inside" class="clearfix">
-                <div class="row">
+                <div>
                     <div class="col-md-12">
                       <?php if ($page['footer_first']): ?>
                           <div class="footer-first">
@@ -410,7 +416,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                       <?php if ($page['footer_second']): ?>
                           <div class="footer-second">
                             <?php print render($page['footer_second']); ?>
@@ -418,7 +424,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                       <?php if ($page['footer_third']): ?>
                           <div class="footer-third">
                             <?php print render($page['footer_third']); ?>
@@ -426,7 +432,7 @@
                       <?php endif; ?>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                       <?php if ($page['footer_fourth']): ?>
                           <div class="footer-fourth">
                             <?php print render($page['footer_fourth']); ?>
@@ -454,7 +460,7 @@
 
         <!-- #subfooter-inside -->
         <div id="sub-footer-inside" class="clearfix">
-            <div class="row">
+            <div>
                 <div class="col-md-12">
                     <!-- #subfooter-left -->
                     <div class="sub-footer-first">

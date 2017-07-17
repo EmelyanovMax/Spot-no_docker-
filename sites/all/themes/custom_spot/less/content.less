@@ -23,6 +23,9 @@ html body.html {
 .btn-primary,
 .btn-success {
   background-color: #35AA4B;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 12px;
 }
 
 a {
@@ -56,36 +59,71 @@ a {
     padding: 0 15px;
     text-align: center;
     width: 20%;
+    .service-logo {
+      text-align: center;
+      max-width: 250px;
+      padding: 10px 0;
+      img {
+        max-height: 150px;
+        height: auto;
+        max-width: 100%;
+        width: auto;
+      }
+    }
+    .service-title{
+      height: 50px;
+      display: table;
+      width: 100%;
+      p{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+        font-size:16px;
+      }
+    }
   }
-  .service-logo {
-    text-align: center;
-    max-width: 250px;
-    padding: 10px 0;
-    img {
-      max-height: 150px;
-      height: auto;
-      max-width: 100%;
-      width: auto;
+
+  @media (max-width: 767px) {
+    .service-wrapper {
+      width: 50%;
+      margin-bottom: 15px;
+      .service-logo {
+        max-width: 100%;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    .service-wrapper {
+      width: 100%;
     }
   }
 }
 
-form#search-api-page-search-form-services > div {
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  padding-right: 100px;
-  button {
-    position: absolute;
-    right: 0;
-    top: 0;
+#search-wrapper {
+  padding: 100px 0 40px;
+  form#search-api-page-search-form-services {
+    margin: 0 auto;
+    max-width: 600px;
+    > div {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      padding-right: 100px;
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 }
 
-form#search-api-page-search-form-services {
-  margin: 0 auto;
-  width: 600px;;
-}
+
+
 
 .front #page #content-top-second-wrapper:before {
   display: none;

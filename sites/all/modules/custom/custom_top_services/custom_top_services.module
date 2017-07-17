@@ -82,10 +82,10 @@ function top_services_block_view() {
       ));
       $markup = array(
         'title' => array(
-          '#prefix' => '<div class="service-title">',
+          '#prefix' => '<div class="service-title"><p>',
           '#type' => 'markup',
           '#markup' => $node->title,
-          '#suffix' => '</div>',
+          '#suffix' => '</p></div>',
         ),
         'field_cost' => array(
           '#prefix' => '<div class="service-field_cost">',
