@@ -82,10 +82,10 @@ function top_services_block_view() {
       ));
       $markup = array(
         'title' => array(
-          '#prefix' => '<div class="service-title"><p>',
+          '#prefix' => '<div class="service-title"><a href="/node/' . $nid . '"><p>',
           '#type' => 'markup',
           '#markup' => $node->title,
-          '#suffix' => '</p></div>',
+          '#suffix' => '</p></a></div>',
         ),
         'field_cost' => array(
           '#prefix' => '<div class="service-field_cost">',
@@ -94,10 +94,10 @@ function top_services_block_view() {
           '#suffix' => '</div>',
         ),
         'field_logo' => array(
-          '#prefix' => '<div class="service-logo">',
+          '#prefix' => '<div class="service-logo"><a href="/node/' . $nid . '">',
           '#type' => 'markup',
           '#markup' => $image,
-          '#suffix' => '</div>',
+          '#suffix' => '</a></div>',
         ),
         'field_type_parent' => array(
           '#prefix' => '<div class="service-field_type_parent">',

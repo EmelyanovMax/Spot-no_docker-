@@ -15,6 +15,10 @@ body, h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+.row {
+  margin: 0;
+}
+
 html body.html {
   background: white !important;
 }
@@ -70,16 +74,16 @@ a {
         width: auto;
       }
     }
-    .service-title{
+    .service-title {
       height: 50px;
       display: table;
       width: 100%;
-      p{
+      p {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         font-weight: bold;
-        font-size:16px;
+        font-size: 16px;
       }
     }
   }
@@ -122,9 +126,6 @@ a {
   }
 }
 
-
-
-
 .front #page #content-top-second-wrapper:before {
   display: none;
 }
@@ -141,6 +142,40 @@ a {
 //End frontpage
 
 // Views
+.collapse {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .collapse {
+    display: none;
+    clear: both;
+    margin-left: 10px;
+    padding-top: 10px;
+  }
+}
+
+.col-sm-3 {
+  overflow: hidden;
+}
+
+.row aside button {
+  background: #35AA4B;
+  padding: 15px 12px;
+  border-radius: 4px;
+  right: 0;
+  top: 0;
+  margin: 0 15px;
+  float: left;
+  z-index: 8;
+  .icon-bar {
+    display: none;
+  }
+  .sr-only {
+    position: static;
+  }
+}
+
 .views-row {
   position: relative;
   float: left;
@@ -150,7 +185,6 @@ a {
   .views-field-field-logo img {
     max-height: 150px;
     height: auto;
-    max-width: 250px;
     width: auto;
   }
 }
@@ -179,9 +213,7 @@ a {
 }
 
 //End views
-
 //Services page
-
 .node .content {
   padding: 20px 0;
   > .field {
@@ -217,6 +249,10 @@ a {
 
 .field-name-field-social-links .field-item {
   float: left;
+}
+
+.info-wrapper .btn {
+  margin: 0;
 }
 
 .field-name-field-logo {
@@ -264,12 +300,10 @@ a {
 .field-name-field-photos {
   .mfp-nogallery-image {
     overflow: hidden;
-    width: 1000px;
-    margin: 0 auto;
     a {
       display: block;
       float: left;
-      margin: 10px 10px;
+      margin: 10px 20px 0 0;
     }
   }
 }

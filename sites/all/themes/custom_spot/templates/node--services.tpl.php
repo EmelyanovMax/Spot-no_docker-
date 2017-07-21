@@ -54,10 +54,11 @@
                 </div>
             </div>
         </div>
-      <?php print render($content['field_photos']);
-      print render($content['field_videos']);
-      print render($content['field_faq']);
+      <?php print render($content['field_faq']);
+      print render($content['comments']);
       print render($content['field_geofield']);
+      print render($content['field_photos']);
+      print render($content['field_videos']);
       ?>
     </div>
 
@@ -67,7 +68,5 @@
         <?php print render($content['links']); ?>
       </footer>
   <?php endif; ?>
-
-  <?php print render($content['comments']); ?>
 
 </article>

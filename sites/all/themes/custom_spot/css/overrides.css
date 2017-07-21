@@ -31,7 +31,6 @@
 .header-menu-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 150px;
   position: relative;
 }
 .header-menu-wrapper #site-name {
@@ -71,6 +70,7 @@
     right: 15px;
     top: 30px;
     margin-right: 0;
+    z-index: 100;
   }
   .header-menu-wrapper #main-menu.col-sm-9 button.navbar-toggle .icon-bar {
     width: 26px;
@@ -133,6 +133,9 @@ h6 {
 }
 .container {
   padding: 0;
+}
+.row {
+  margin: 0;
 }
 html body.html {
   background: white !important;
@@ -239,6 +242,36 @@ a {
 .front p {
   text-align-last: center;
 }
+.collapse {
+  display: block;
+}
+@media (max-width: 767px) {
+  .collapse {
+    display: none;
+    clear: both;
+    margin-left: 10px;
+    padding-top: 10px;
+  }
+}
+.col-sm-3 {
+  overflow: hidden;
+}
+.row aside button {
+  background: #35AA4B;
+  padding: 15px 12px;
+  border-radius: 4px;
+  right: 0;
+  top: 0;
+  margin: 0 15px;
+  float: left;
+  z-index: 8;
+}
+.row aside button .icon-bar {
+  display: none;
+}
+.row aside button .sr-only {
+  position: static;
+}
 .views-row {
   position: relative;
   float: left;
@@ -249,7 +282,6 @@ a {
 .views-row .views-field-field-logo img {
   max-height: 150px;
   height: auto;
-  max-width: 250px;
   width: auto;
 }
 .view-all-services .views-row:nth-child(3n+1) {
@@ -299,6 +331,9 @@ a {
 .field-name-field-social-links .field-item {
   float: left;
 }
+.info-wrapper .btn {
+  margin: 0;
+}
 .field-name-field-logo {
   overflow: hidden;
   width: 30%;
@@ -338,13 +373,11 @@ a {
 }
 .field-name-field-photos .mfp-nogallery-image {
   overflow: hidden;
-  width: 1000px;
-  margin: 0 auto;
 }
 .field-name-field-photos .mfp-nogallery-image a {
   display: block;
   float: left;
-  margin: 10px 10px;
+  margin: 10px 20px 0 0;
 }
 .content .field-name-field-photos .field-items .field-item {
   width: 100%;

@@ -9,8 +9,6 @@
         <!-- #header-inside -->
         <div id="header-inside" class="clearfix">
             <div class="row">
-
-
                 <div class="col-md-12">
                     <!-- #header -->
                   <?php if ($page['header']) : ?>
@@ -49,7 +47,15 @@
                         </div>
                         <!-- Main Menu -->
                         <div id="main-menu" class="col-sm-9">
-                            <div class="navbar">
+                            <button type="button" class="navbar-toggle"
+                                    data-toggle="collapse" data-target="#navbar"
+                                    aria-expanded="true" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div id="navbar" class="navbar-collapse collapse">
                                 <div id="navbar-mainmenu-collapse">
                                     <nav id="main-navigation" class="">
                                       <?php if ($page['main_navigation']) : ?>
@@ -180,10 +186,24 @@
 
             <div class="row">
 
-              <?php if ($page['sidebar_first']): ?>
-                  <aside class="<?php print $sidebar_first_grid_class; ?>">
+              <?php $content_class = 'col-sm-12';
+              if ($page['sidebar_first']):
+                $content_class = 'col-sm-9'; ?>
+
+                  <aside class="col-sm-3">
+                      <button type="button" class="navbar-toggle"
+                              data-toggle="collapse"
+                              data-target="#sidebar-first"
+                              aria-expanded="true"
+                              aria-controls="sidebar-first">
+                          <span class="sr-only">Filters</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
                       <!--#sidebar-first-->
-                      <section id="sidebar-first" class="sidebar clearfix">
+                      <section id="sidebar-first"
+                               class="sidebar-first-collapse sidebar clearfix collapse">
                         <?php print render($page['sidebar_first']); ?>
                       </section>
                       <!--EOF:#sidebar-first-->
@@ -191,7 +211,7 @@
               <?php endif; ?>
 
 
-                <section class="<?php print $main_grid_class; ?>">
+                <section class="<?php print $content_class ?>">
 
                     <!-- #main -->
                     <div id="main" class="clearfix">
@@ -391,46 +411,44 @@
         <div class="container">
             <!-- #footer-inside -->
             <div id="footer-inside" class="clearfix">
-                <div class="row">
-                    <div class="col-md-12">
-                      <?php if ($page['footer_first']): ?>
-                          <div class="footer-first">
-                            <?php print render($page['footer_first']); ?>
-                          </div>
-                      <?php endif; ?>
-                    </div>
+                <div class="col-md-12">
+                  <?php if ($page['footer_first']): ?>
+                      <div class="footer-first">
+                        <?php print render($page['footer_first']); ?>
+                      </div>
+                  <?php endif; ?>
+                </div>
 
-                    <div class="col-sm-4">
-                      <?php if ($page['footer_second']): ?>
-                          <div class="footer-second">
-                            <?php print render($page['footer_second']); ?>
-                          </div>
-                      <?php endif; ?>
-                    </div>
+                <div class="col-sm-4">
+                  <?php if ($page['footer_second']): ?>
+                      <div class="footer-second">
+                        <?php print render($page['footer_second']); ?>
+                      </div>
+                  <?php endif; ?>
+                </div>
 
-                    <div class="col-sm-4">
-                      <?php if ($page['footer_third']): ?>
-                          <div class="footer-third">
-                            <?php print render($page['footer_third']); ?>
-                          </div>
-                      <?php endif; ?>
-                    </div>
+                <div class="col-sm-4">
+                  <?php if ($page['footer_third']): ?>
+                      <div class="footer-third">
+                        <?php print render($page['footer_third']); ?>
+                      </div>
+                  <?php endif; ?>
+                </div>
 
-                    <div class="col-sm-4">
-                      <?php if ($page['footer_fourth']): ?>
-                          <div class="footer-fourth">
-                            <?php print render($page['footer_fourth']); ?>
-                          </div>
-                      <?php endif; ?>
-                    </div>
+                <div class="col-sm-4">
+                  <?php if ($page['footer_fourth']): ?>
+                      <div class="footer-fourth">
+                        <?php print render($page['footer_fourth']); ?>
+                      </div>
+                  <?php endif; ?>
+                </div>
 
-                    <div class="col-md-12">
-                      <?php if ($page['footer_fifth']): ?>
-                          <div class="footer-fifth">
-                            <?php print render($page['footer_fifth']); ?>
-                          </div>
-                      <?php endif; ?>
-                    </div>
+                <div class="col-md-12">
+                  <?php if ($page['footer_fifth']): ?>
+                      <div class="footer-fifth">
+                        <?php print render($page['footer_fifth']); ?>
+                      </div>
+                  <?php endif; ?>
                 </div>
             </div>
             <!-- EOF: #footer-inside -->

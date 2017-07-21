@@ -8,81 +8,80 @@
 
         <!-- #header-inside -->
         <div id="header-inside" class="clearfix">
-            <div>
-                <div class="col-md-12">
-                    <!-- #header -->
-                  <?php if ($page['header']) : ?>
-                      <div id="header-region" class="clearfix">
-                        <?php print render($page['header']); ?>
-                      </div>
-                  <?php endif; ?>
-                    <!-- EOF:#header -->
+            <div class="col-md-12">
+                <!-- #header -->
+              <?php if ($page['header']) : ?>
+                  <div id="header-region" class="clearfix">
+                    <?php print render($page['header']); ?>
+                  </div>
+              <?php endif; ?>
+                <!-- EOF:#header -->
 
-                    <div class="header-menu-wrapper">
-                        <div class="col-sm-3 clearfix">
+                <div class="header-menu-wrapper">
+                    <div class="col-sm-3 clearfix">
 
-                          <?php if ($logo): ?>
-                              <div id="logo">
-                                  <a href="<?php print $front_page; ?>"
-                                     title="<?php print t('Home'); ?>"
-                                     rel="home"> <img
-                                              src="<?php print $logo; ?>"
-                                              alt="<?php print t('Home'); ?>"/>
-                                  </a>
-                              </div>
-                          <?php endif; ?>
+                      <?php if ($logo): ?>
+                          <div id="logo">
+                              <a href="<?php print $front_page; ?>"
+                                 title="<?php print t('Home'); ?>"
+                                 rel="home"> <img
+                                          src="<?php print $logo; ?>"
+                                          alt="<?php print t('Home'); ?>"/>
+                              </a>
+                          </div>
+                      <?php endif; ?>
 
-                          <?php if ($site_name): ?>
-                              <div id="site-name">
-                                  <a href="<?php print $front_page; ?>"
-                                     title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-                              </div>
-                          <?php endif; ?>
+                      <?php if ($site_name): ?>
+                          <div id="site-name">
+                              <a href="<?php print $front_page; ?>"
+                                 title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+                          </div>
+                      <?php endif; ?>
 
-                          <?php if ($site_slogan): ?>
-                              <div id="site-slogan">
-                                <?php print $site_slogan; ?>
-                              </div>
-                          <?php endif; ?>
+                      <?php if ($site_slogan): ?>
+                          <div id="site-slogan">
+                            <?php print $site_slogan; ?>
+                          </div>
+                      <?php endif; ?>
 
-                        </div>
-                        <!-- Main Menu -->
-                        <div id="main-menu" class="col-sm-9">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <div id="navbar" class="navbar-collapse collapse">
-                                <div id="navbar-mainmenu-collapse">
-                                    <nav id="main-navigation" class="">
-                                      <?php if ($page['main_navigation']) : ?>
-                                        <?php print drupal_render($page['main_navigation']); ?>
-                                      <?php else : ?>
-                                        <?php print theme('links__system_main_menu', array(
-                                          'links' => $main_menu,
-                                          'attributes' => array(
-                                            'class' => array(
-                                              'main-menu',
-                                              'menu'
-                                            ),
-                                          ),
-                                          'heading' => array(
-                                            'text' => t('Main menu'),
-                                            'level' => 'h2',
-                                            'class' => array('element-invisible'),
-                                          ),
-                                        )); ?>
-                                      <?php endif; ?>
-                                    </nav>
-                                </div>
+                    </div>
+                    <!-- Main Menu -->
+                    <div id="main-menu" class="col-sm-9">
+                        <button type="button" class="navbar-toggle"
+                                data-toggle="collapse" data-target="#navbar"
+                                aria-expanded="true" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <div id="navbar-mainmenu-collapse">
+                                <nav id="main-navigation" class="">
+                                  <?php if ($page['main_navigation']) : ?>
+                                    <?php print drupal_render($page['main_navigation']); ?>
+                                  <?php else : ?>
+                                    <?php print theme('links__system_main_menu', array(
+                                      'links' => $main_menu,
+                                      'attributes' => array(
+                                        'class' => array(
+                                          'main-menu',
+                                          'menu'
+                                        ),
+                                      ),
+                                      'heading' => array(
+                                        'text' => t('Main menu'),
+                                        'level' => 'h2',
+                                        'class' => array('element-invisible'),
+                                      ),
+                                    )); ?>
+                                  <?php endif; ?>
+                                </nav>
                             </div>
                         </div>
                     </div>
-                    <!-- End Menu -->
                 </div>
-
+                <!-- End Menu -->
             </div>
         </div>
         <!-- EOF: #header-inside -->
