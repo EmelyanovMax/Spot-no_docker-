@@ -20,7 +20,7 @@
   margin: 0;
 }
 #logo img {
-  width: 50px;
+  width: 100px;
 }
 #header-region {
   background-color: black;
@@ -302,6 +302,7 @@ a {
 .views-row .views-field-field-logo img {
   height: auto;
   max-width: 100%;
+  margin: auto;
   width: auto;
 }
 .views-row .views-field-field-title {
