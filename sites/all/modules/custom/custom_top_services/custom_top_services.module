@@ -142,3 +142,13 @@ function _three_month_subscribe($form, &$form_state) {
   $user = user_load($form_state['values']['uid']);
   rules_invoke_event('three_month_subscription', $user);
 }
+
+/**
+ * Implements hook_user_logout().
+ */
+function custom_top_services_user_logout($account) {
+global $user;
+    // Load the anonymous user
+  $user = drupal_anonymous_user();
+    drupal_goto($_SERVER['HTTP_REFERER']);
+}

@@ -287,6 +287,35 @@ a {
 .view-all-services .views-row:nth-child(3n+1) {
   clear: left;
 }
+.views-row {
+  position: relative;
+  float: left;
+  padding: 0 15px;
+  text-align: center;
+  width: 30%;
+}
+.views-row .views-field-field-logo {
+  text-align: center;
+  max-width: 250px;
+  padding: 10px 0;
+}
+.views-row .views-field-field-logo img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.views-row .views-field-field-title {
+  height: 50px;
+  display: table;
+  width: 100%;
+}
+.views-row .views-field-field-title a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
 #slider-facetapi-facet-search-apiservices-block-field-cost {
   width: 70%;
   margin: 0 auto 0 0;
@@ -294,17 +323,15 @@ a {
 #views-exposed-form-all-services-page-search--page {
   width: 250px;
 }
-.pagination {
-  margin: 90px auto;
-  width: 500px;
-  float: right;
-}
 .node .content {
   padding: 20px 0;
 }
 .node .content > .field {
   clear: both;
   width: 100%;
+}
+.ui-datepicker-div {
+  z-index: 10 !important;
 }
 .node-services img {
   max-height: 150px;
@@ -341,6 +368,7 @@ a {
 .field-name-field-logo img {
   max-width: 250px;
   float: right;
+  margin: 0 5px;
 }
 .rating-wrapper {
   clear: both;
@@ -384,7 +412,6 @@ a {
 }
 .field-name-field-videos .field-items {
   overflow: hidden;
-  width: 1000px;
   margin: 0 auto;
 }
 .field-name-field-videos .even {
