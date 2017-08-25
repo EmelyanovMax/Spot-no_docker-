@@ -31,12 +31,15 @@
                               </div>
                           <?php endif; ?>
 
-                          <?php if ($site_name): ?>
-                              <div id="site-name">
-                                  <a href="<?php print $front_page; ?>"
-                                     title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-                              </div>
-                          <?php endif; ?>
+                            <!--                          --><?php //if ($site_name): ?>
+                            <!--                              <div id="site-name">-->
+                            <!--                                  <a href="-->
+                          <?php //print $front_page; ?><!--"-->
+                            <!--                                     title="-->
+                          <?php //print t('Home'); ?><!--">-->
+                          <?php //print $site_name; ?><!--</a>-->
+                            <!--                              </div>-->
+                            <!--                          --><?php //endif; ?>
 
                           <?php if ($site_slogan): ?>
                               <div id="site-slogan">
@@ -442,53 +445,9 @@
                       </div>
                   <?php endif; ?>
                 </div>
-
-                <div class="col-md-12">
-                  <?php if ($page['footer_fifth']): ?>
-                      <div class="footer-fifth">
-                        <?php print render($page['footer_fifth']); ?>
-                      </div>
-                  <?php endif; ?>
-                </div>
             </div>
             <!-- EOF: #footer-inside -->
         </div>
     </footer>
     <!-- EOF #footer -->
 <?php endif; ?>
-
-<footer id="sub-footer" class="clearfix">
-    <div class="container">
-
-        <!-- #subfooter-inside -->
-        <div id="sub-footer-inside" class="clearfix">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- #subfooter-left -->
-                    <div class="sub-footer-first">
-                      <?php if ($page['sub_footer_first']): ?>
-                        <?php print render($page['sub_footer_first']); ?>
-                      <?php endif; ?>
-
-                    </div>
-                    <!-- EOF: #subfooter-left -->
-                </div>
-
-                <div class="col-md-6">
-                    <!-- #subfooter-right -->
-                    <div class="sub-footer-second">
-
-                      <?php if ($page['sub_footer_second']): ?>
-                        <?php print render($page['sub_footer_second']); ?>
-                      <?php endif; ?>
-
-                    </div>
-                    <!-- EOF: #subfooter-right -->
-                </div>
-            </div>
-        </div>
-        <!-- EOF: #subfooter-inside -->
-
-    </div>
-</footer>
-<!-- EOF:#subfooter -->

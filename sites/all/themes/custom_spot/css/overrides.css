@@ -119,7 +119,7 @@
   font-family: gothic;
   src: url(../fonts/GOTHIC.TTF);
 }
-body,
+html,
 h1,
 h2,
 h3,
@@ -286,6 +286,9 @@ a {
 }
 .view-all-services .views-row:nth-child(3n+1) {
   clear: left;
+}
+.view-all-services .view-content {
+  float: left;
 }
 .views-row {
   position: relative;
@@ -697,4 +700,10 @@ a {
 }
 #footer #footer-inside div {
   text-align: center;
+}
+#logo-footer {
+  background-color: white;
+  float: none;
+  max-width: 200px;
+  margin: auto;
 }
