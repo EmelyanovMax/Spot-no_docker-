@@ -432,7 +432,7 @@
                             <div id="logo-footer">
                                 <a href="<?php print $front_page; ?>"
                                    rel="home"> <img
-                                            src="<?php print $logo; ?>"/>
+                                            src="/sites/all/themes/custom_spot/trife_logo_final_black.png"/>
                                 </a>
                             </div>
                         </div>

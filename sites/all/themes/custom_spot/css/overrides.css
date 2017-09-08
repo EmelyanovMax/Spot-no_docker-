@@ -701,8 +701,8 @@ a {
   text-align: center;
 }
 #logo-footer {
-  background-color: white;
   float: none;
   max-width: 200px;
+  padding-top: 70px;
   margin: auto;
 }
