@@ -130,7 +130,7 @@ function custom_top_services_form_alter(&$form, &$form_state, $form_id) {
   if (strstr($form_id, 'commerce_cart_add_to_cart_form')) {
     if ($form_id == 'commerce_cart_add_to_cart_form_6') {
       $form['#submit'][0] = '_three_month_subscribe';
-      $form['submit']['#value'] = 'Try for free';
+      $form['submit']['#value'] = 'Активна';
     }
     else {
       $form['submit']['#disabled'] = TRUE;
