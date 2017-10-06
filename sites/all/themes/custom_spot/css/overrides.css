@@ -215,6 +215,7 @@ a {
 }
 #search-wrapper {
   padding: 100px 0 40px;
+  height: 300px;
 }
 #search-wrapper form#search-api-page-search-form-services {
   margin: 0 auto;
@@ -330,6 +331,14 @@ a {
 #views-exposed-form-all-services-page-search--page {
   width: 250px;
 }
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  white-space: normal !important;
+}
 .node .content {
   padding: 20px 0;
 }
@@ -357,10 +366,18 @@ a {
 }
 .title-wrapper h2 {
   margin: 0;
+  overflow: hidden;
 }
 .title-wrapper h2 a {
   float: left;
   margin-right: 25px;
+}
+.title-wrapper form {
+  clear: both;
+  margin: 15px 0 0 0;
+}
+.field-name-field-type select {
+  height: 60px;
 }
 .field-name-field-social-links .field-item {
   float: left;
@@ -439,6 +456,7 @@ a {
 }
 .top-image #taxonomy-term-1 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/event.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-1 h2 {
@@ -449,6 +467,7 @@ a {
 }
 .top-image #taxonomy-term-2 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-2 h2 {
@@ -459,6 +478,7 @@ a {
 }
 .top-image #taxonomy-term-3 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/transport.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-3 h2 {
@@ -469,6 +489,7 @@ a {
 }
 .top-image #taxonomy-term-4 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/gid_school.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-4 h2 {
@@ -479,6 +500,7 @@ a {
 }
 .top-image #taxonomy-term-5 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/rent_sell.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-5 h2 {
@@ -489,6 +511,7 @@ a {
 }
 .top-image #taxonomy-term-6 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/event.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-6 h2 {
@@ -499,6 +522,7 @@ a {
 }
 .top-image #taxonomy-term-7 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/event.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-7 h2 {
@@ -509,6 +533,7 @@ a {
 }
 .top-image #taxonomy-term-8 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/event.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-8 h2 {
@@ -519,6 +544,7 @@ a {
 }
 .top-image #taxonomy-term-9 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/event.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-9 h2 {
@@ -529,6 +555,7 @@ a {
 }
 .top-image #taxonomy-term-10 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/event.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-10 h2 {
@@ -539,6 +566,7 @@ a {
 }
 .top-image #taxonomy-term-11 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-11 h2 {
@@ -549,6 +577,7 @@ a {
 }
 .top-image #taxonomy-term-12 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-12 h2 {
@@ -559,6 +588,7 @@ a {
 }
 .top-image #taxonomy-term-13 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-13 h2 {
@@ -569,6 +599,7 @@ a {
 }
 .top-image #taxonomy-term-14 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-14 h2 {
@@ -579,6 +610,7 @@ a {
 }
 .top-image #taxonomy-term-15 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-15 h2 {
@@ -589,6 +621,7 @@ a {
 }
 .top-image #taxonomy-term-16 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-16 h2 {
@@ -599,6 +632,7 @@ a {
 }
 .top-image #taxonomy-term-17 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/home.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-17 h2 {
@@ -609,6 +643,7 @@ a {
 }
 .top-image #taxonomy-term-18 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/transport.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-18 h2 {
@@ -619,6 +654,7 @@ a {
 }
 .top-image #taxonomy-term-19 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/transport.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-19 h2 {
@@ -629,6 +665,7 @@ a {
 }
 .top-image #taxonomy-term-20 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/transport.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-20 h2 {
@@ -639,6 +676,7 @@ a {
 }
 .top-image #taxonomy-term-21 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/transport.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-21 h2 {
@@ -649,6 +687,7 @@ a {
 }
 .top-image #taxonomy-term-22 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/gid_school.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-22 h2 {
@@ -659,6 +698,7 @@ a {
 }
 .top-image #taxonomy-term-23 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/gid_school.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-23 h2 {
@@ -669,6 +709,7 @@ a {
 }
 .top-image #taxonomy-term-24 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/gid_school.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-24 h2 {
@@ -679,6 +720,7 @@ a {
 }
 .top-image #taxonomy-term-25 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/rent_sell.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-25 h2 {
@@ -689,6 +731,7 @@ a {
 }
 .top-image #taxonomy-term-26 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/rent_sell.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-26 h2 {
@@ -699,6 +742,7 @@ a {
 }
 .top-image #taxonomy-term-26 {
   background-image: url("/sites/all/themes/custom_spot/images/services-types/event.jpg");
+  background-size: cover;
   line-height: 400px;
 }
 .top-image #taxonomy-term-26 h2 {
@@ -710,12 +754,15 @@ a {
 #footer {
   padding: 0;
 }
+#footer ul.menu li {
+  padding: 5px 0 5px 0;
+}
 #footer #footer-inside div {
   text-align: center;
 }
 #logo-footer {
   float: none;
   max-width: 200px;
-  padding-top: 70px;
+  padding-top: 15px;
   margin: auto;
 }

@@ -7,6 +7,7 @@ function custom_spot_preprocess_node(&$variables) {
     $variables['content']['field_cost'][0]['#markup'] .= ' руб.';
   }
   $variables['comment_button'] = '<div class="comments-button"><a href="' . $url . '#comments" class="btn btn-default">Отзывы и коментарии</a></div>';
+  $variables['media_button'] = '<div class="media-button"><a href="' . $url . '#media" class="btn btn-default">Фото и Видео</a></div>';
 
   $user = user_load($variables['uid']);
   if (in_array('company', $user->roles)) {

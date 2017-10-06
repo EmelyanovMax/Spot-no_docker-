@@ -432,13 +432,15 @@
 
                 <div class="col-sm-4">
                     <div class="footer-third">
-                        <!--                            --><?php //print render($page['footer_third']); ?>
                         <div id="logo-footer">
                             <a href="<?php print $front_page; ?>"
                                rel="home"> <img
                                         src="/sites/all/themes/custom_spot/trife_logo_final_black.png"/>
                             </a>
                         </div>
+                      <?php if ($page['footer_third']): ?>
+                        <?php print render($page['footer_third']); ?>
+                      <?php endif; ?>
                     </div>
                 </div>
 

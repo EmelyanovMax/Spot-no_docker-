@@ -30,6 +30,7 @@
               print render($content['field_cost']);
               print render($content['field_social_links']);
               print $comment_button;
+              print $media_button;
               ?>
             </div>
             <div class="main-info-wrapper col-md-8">
@@ -56,10 +57,12 @@
         </div>
       <?php print render($content['field_faq']);
       print render($content['comments']);
-      print render($content['field_geofield']);
-      print render($content['field_photos']);
-      print render($content['field_videos']);
-      ?>
+      print render($content['field_geofield']); ?>
+        <div id="media">
+          <?php print render($content['field_photos']);
+          print render($content['field_videos']);
+          ?>
+        </div>
     </div>
 
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>

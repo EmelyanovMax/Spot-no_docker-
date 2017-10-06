@@ -110,6 +110,7 @@ a {
 
 #search-wrapper {
   padding: 100px 0 40px;
+  height: 300px;
   form#search-api-page-search-form-services {
     margin: 0 auto;
     max-width: 600px;
@@ -245,6 +246,11 @@ a {
 }
 
 //End views
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th,
+.table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  white-space: normal !important;
+}
+
 //Services page
 .node .content {
   padding: 20px 0;
@@ -275,12 +281,21 @@ a {
   }
   h2 {
     margin: 0;
+    overflow: hidden;
     a {
       float: left;
       margin-right: 25px;
     }
   }
+  form {
+    clear: both;
+    margin: 15px 0 0 0;
+  }
 
+}
+
+.field-name-field-type select {
+  height: 60px;
 }
 
 .field-name-field-social-links .field-item {

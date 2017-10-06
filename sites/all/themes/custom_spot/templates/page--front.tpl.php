@@ -435,6 +435,9 @@
                                             src="/sites/all/themes/custom_spot/trife_logo_final_black.png"/>
                                 </a>
                             </div>
+                          <?php if ($page['footer_third']): ?>
+                            <?php print render($page['footer_third']); ?>
+                          <?php endif; ?>
                         </div>
                     </div>
 
