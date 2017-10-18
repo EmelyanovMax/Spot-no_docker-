@@ -13,6 +13,9 @@ function custom_spot_preprocess_node(&$variables) {
   if (in_array('company', $user->roles)) {
     $variables['used_by_form'] = drupal_get_form('used_by_form');
   }
+  else {
+    $variables['content']['field_map'] = '';
+  }
 }
 
 // Скрываем заголовок на странице с услугой
