@@ -214,8 +214,10 @@ a {
   }
 }
 #search-wrapper {
-  padding: 100px 0 40px;
-  height: 300px;
+  padding: 100px 0 40px 0;
+  background-size: cover;
+  max-height: 300px;
+  height: 100%;
 }
 #search-wrapper form#search-api-page-search-form-services {
   margin: 0 auto;
