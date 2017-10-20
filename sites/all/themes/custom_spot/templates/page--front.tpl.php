@@ -97,12 +97,10 @@
 <?php if ($page['search']) : ?>
     <div id="search-wrapper" class="clearfix">
         <div class="container">
-            <div>
-                <div class="col-md-12">
-                    <div id="search-region" class="clearfix">
-                        <div id="navbar-search-collapse">
-                          <?php print render($page['search']); ?>
-                        </div>
+            <div class="col-md-12">
+                <div id="search-region" class="clearfix">
+                    <div id="navbar-search-collapse">
+                      <?php print render($page['search']); ?>
                     </div>
                 </div>
             </div>
@@ -453,30 +451,35 @@
             <!-- EOF: #footer-inside -->
         </div>
         <!-- Yandex.Metrika counter -->
-        <script type="text/javascript" >
+        <script type="text/javascript">
             (function (d, w, c) {
-                (w[c] = w[c] || []).push(function() {
+                (w[c] = w[c] || []).push(function () {
                     try {
                         w.yaCounter46295856 = new Ya.Metrika({
-                            id:46295856,
-                            clickmap:true,
-                            trackLinks:true,
-                            accurateTrackBounce:true,
-                            webvisor:true
+                            id: 46295856,
+                            clickmap: true,
+                            trackLinks: true,
+                            accurateTrackBounce: true,
+                            webvisor: true
                         });
-                    } catch(e) { }
+                    } catch (e) {
+                    }
                 });
 
                 var n = d.getElementsByTagName("script")[0],
                     s = d.createElement("script"),
-                    f = function () { n.parentNode.insertBefore(s, n); };
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
                 s.type = "text/javascript";
                 s.async = true;
                 s.src = "https://mc.yandex.ru/metrika/watch.js";
 
                 if (w.opera == "[object Opera]") {
                     d.addEventListener("DOMContentLoaded", f, false);
-                } else { f(); }
+                } else {
+                    f();
+                }
             })(document, window, "yandex_metrika_callbacks");
         </script>
         <!-- /Yandex.Metrika counter -->

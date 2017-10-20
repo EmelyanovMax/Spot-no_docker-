@@ -58,7 +58,7 @@
       <?php print render($content['field_faq']);
       print render($content['comments']);
       print render($content['field_geofield']);
-      print render($content['field_map']); ?>
+      print $field_map; ?>
         <div id="media">
           <?php print render($content['field_photos']);
 //          print render($content['field_videos']);
