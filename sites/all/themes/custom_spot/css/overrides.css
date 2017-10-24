@@ -217,7 +217,7 @@ a {
   padding: 100px 0 40px 0;
   background-size: contain;
   background-position: top;
-  max-height: 400px;
+  max-height: 300px;
   height: 100%;
 }
 #search-wrapper form#search-api-page-search-form-services {
@@ -234,6 +234,12 @@ a {
   position: absolute;
   right: 0;
   top: 0;
+}
+@media (min-width: 1199px) {
+  #search-wrapper {
+    padding: 100px 0 0 0;
+    max-height: 370px;
+  }
 }
 @media (max-width: 1079px) {
   #search-wrapper {
