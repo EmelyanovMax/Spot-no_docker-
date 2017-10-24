@@ -217,6 +217,7 @@ a {
   padding: 100px 0 40px 0;
   background-size: contain;
   background-position: top;
+  max-height: 400px;
   height: 100%;
 }
 #search-wrapper form#search-api-page-search-form-services {
@@ -234,10 +235,37 @@ a {
   right: 0;
   top: 0;
 }
-@media (max-width: 767px) {
-  #search-wrapper form#search-api-page-search-form-services {
-    width: 100%;
+@media (max-width: 1079px) {
+  #search-wrapper {
+    padding: 70px 0 40px 0;
+    max-height: 230px;
   }
+}
+@media (max-width: 767px) {
+  #search-wrapper {
+    padding: 40px 0 40px 0;
+    max-height: 150px;
+  }
+}
+#content-top-first-wrapper {
+  padding: 0;
+}
+#content-top-first {
+  max-width: 700px;
+  float: none;
+  margin: 0 auto;
+}
+#content-top-first ul.menu li {
+  display: inline;
+}
+#content-top-first ul.menu li a {
+  color: #000000;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .front #page #content-top-second-wrapper:before {
   display: none;

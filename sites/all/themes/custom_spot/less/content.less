@@ -1,6 +1,6 @@
 @font-face {
   font-family: gothic;
-    src: url(../fonts/GOTHIC.TTF);
+  src: url(../fonts/GOTHIC.TTF);
 }
 
 html, h1, h2, h3, h4, h5, h6 {
@@ -112,7 +112,7 @@ a {
   padding: 100px 0 40px 0;
   background-size: contain;
   background-position: top;
-  //max-height: 300px;
+  max-height: 400px;
   height: 100%;
   form#search-api-page-search-form-services {
     margin: 0 auto;
@@ -128,8 +128,41 @@ a {
         top: 0;
       }
     }
-    @media (max-width: 767px) {
-      width: 100%;
+  }
+}
+
+@media (max-width: 1079px) {
+  #search-wrapper {
+    padding: 70px 0 40px 0;
+    max-height: 230px;
+  }
+}
+
+@media (max-width: 767px) {
+  #search-wrapper {
+    padding: 40px 0 40px 0;
+    max-height: 150px;
+  }
+}
+
+#content-top-first-wrapper {
+  padding: 0;
+}
+
+#content-top-first {
+  max-width: 700px;
+  float: none;
+  margin: 0 auto;
+  ul.menu li {
+    display: inline;
+    a {
+      color: #000000;
+      font-family: "Raleway", Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 19px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }
