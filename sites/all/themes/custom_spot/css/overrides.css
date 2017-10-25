@@ -329,6 +329,7 @@ a {
 }
 .view-all-services .view-content {
   float: left;
+  width: 100%;
 }
 .views-row {
   position: relative;

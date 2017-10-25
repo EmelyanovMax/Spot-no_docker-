@@ -57,7 +57,7 @@
         </div>
       <?php print render($content['field_faq']);
       print render($content['comments']);
-      print render($content['field_geofield']);
+//      print render($content['field_geofield']);
       print $field_map; ?>
         <div id="media">
           <?php print render($content['field_photos']);
