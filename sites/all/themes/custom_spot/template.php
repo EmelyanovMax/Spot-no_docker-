@@ -13,9 +13,11 @@ function custom_spot_preprocess_node(&$variables) {
   if (in_array('company', $user->roles)) {
     $variables['used_by_form'] = drupal_get_form('used_by_form');
     $variables['field_map'] = render($variables['content']['field_map']);
+    $variables['field_videos'] = render($variables['content']['field_videos']);
   }
   else {
     $variables['field_map'] = '';
+    $variables['field_videos'] = '';
   }
 }
 

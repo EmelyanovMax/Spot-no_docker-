@@ -61,7 +61,7 @@
       print $field_map; ?>
         <div id="media">
           <?php print render($content['field_photos']);
-//          print render($content['field_videos']);
+          print $field_videos;
           ?>
         </div>
     </div>
