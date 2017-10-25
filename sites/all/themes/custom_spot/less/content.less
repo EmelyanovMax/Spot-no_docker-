@@ -110,10 +110,9 @@ a {
 
 #search-wrapper {
   padding: 100px 0 40px 0;
-  background-size: contain;
+  background-size: cover;
   background-position: top;
   max-height: 300px;
-  height: 100%;
   form#search-api-page-search-form-services {
     margin: 0 auto;
     max-width: 600px;
@@ -133,22 +132,27 @@ a {
 
 @media (min-width: 1199px) {
   #search-wrapper {
-    padding: 100px 0 0 0;
-    max-height: 370px;
+    height: 300px;
   }
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 992px) {
   #search-wrapper {
-    padding: 70px 0 40px 0;
-    max-height: 230px;
+    padding: 65px 0 40px 0;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   #search-wrapper {
-    padding: 40px 0 40px 0;
+    padding: 65px 0 40px 0;
     max-height: 150px;
+  }
+}
+
+@media (max-width: 660px) {
+  #search-wrapper {
+    padding: 35px 0 40px 0;
+    max-height: 100px;
   }
 }
 
