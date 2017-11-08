@@ -29,8 +29,6 @@
               print render($content['field_date']);
               print render($content['field_cost']);
               print render($content['field_social_links']);
-              print $comment_button;
-              print $media_button;
               ?>
             </div>
             <div class="main-info-wrapper col-md-8">
@@ -53,12 +51,23 @@
                   <?php print render($content['body']);
                   ?>
                 </div>
+                <div class="buttons">
+                  <?php print $comment_button;
+                  print $media_button;
+                  print $map_button;
+                  print $advice_button; ?>
+                </div>
             </div>
         </div>
-      <?php print render($content['field_faq']);
-      print render($content['comments']);
-//      print render($content['field_geofield']);
-      print $field_map; ?>
+        <div id="advice">
+          <?php print render($content['field_faq']); ?>
+        </div>
+      <?php print render($content['comments']);
+      //      print render($content['field_geofield']);
+      ?>
+        <div id="map">
+          <?php print $field_map; ?>
+        </div>
         <div id="media">
           <?php print render($content['field_photos']);
           print $field_videos;
