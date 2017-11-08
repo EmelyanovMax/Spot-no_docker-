@@ -108,7 +108,7 @@ function top_services_block_view() {
         'view_more' => array(
           '#prefix' => '<div class="view-more">',
           '#type' => 'markup',
-          '#markup' => '<a href="/node/' . $node->nid . '">смотерть больше</a>',
+          '#markup' => '<a href="/node/' . $node->nid . '">смотреть больше</a>',
           '#suffix' => '</div>',
         ),
       );
