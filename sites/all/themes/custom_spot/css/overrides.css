@@ -311,7 +311,7 @@ a {
 .front #page #content-top-second-wrapper:before {
   display: none;
 }
-.front h2.block-title {
+.front #search-wrapper h2.block-title {
   text-align-last: center;
   color: #3C9EAB;
   font-size: 24px;
@@ -319,7 +319,7 @@ a {
   margin: 0px auto 160px auto;
   width: 450px;
 }
-.front p {
+.front #search-wrapper p {
   text-align-last: center;
 }
 .collapse {
