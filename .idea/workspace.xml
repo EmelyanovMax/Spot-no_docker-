@@ -80,7 +80,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/custom_spot/css/taxonomy_23.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/custom_spot/favicon.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/custom_spot/images/main.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/custom_spot/less/content.less" afterPath="$PROJECT_DIR$/sites/all/themes/custom_spot/less/content.less" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -118,8 +117,8 @@
       <file leaf-file-name="content.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/custom_spot/less/content.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="165" column="9" lean-forward="false" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+            <state relative-caret-position="390">
+              <caret line="137" column="3" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="137" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -541,7 +540,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="WebServerToolWindowFactoryState" value="true" />
   </component>
@@ -643,12 +642,12 @@
       <updated>1499242930073</updated>
       <workItem from="1499242931161" duration="3971000" />
       <workItem from="1510637908773" duration="425000" />
-      <workItem from="1511166958979" duration="158000" />
+      <workItem from="1511166958979" duration="570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4554000" />
+    <option name="totallyTimeSpent" value="4966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1420" y="-11" width="1867" height="1092" extended-state="6" />
@@ -784,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/custom_spot/less/content.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="165" column="9" lean-forward="false" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+        <state relative-caret-position="390">
+          <caret line="137" column="3" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="137" selection-end-column="3" />
           <folding />
         </state>
       </provider>
