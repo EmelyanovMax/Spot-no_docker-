@@ -249,7 +249,6 @@ a {
 }
 @media (max-width: 992px) {
   .front #search-wrapper {
-    padding: 65px 0 40px 0;
     height: 200px;
   }
   .front #search-wrapper h2.block-title {
@@ -260,7 +259,6 @@ a {
 }
 @media (max-width: 769px) {
   .front #search-wrapper {
-    padding: 65px 0 40px 0;
     height: 150px;
   }
   .front #search-wrapper h2.block-title {
@@ -271,14 +269,13 @@ a {
 }
 @media (max-width: 660px) {
   .front #search-wrapper {
-    padding: 35px 0 40px 0;
     height: 100px;
     font-size: 14px;
   }
   .front #search-wrapper h2.block-title {
     font-size: 14px;
     margin: 0px auto 5px auto;
-    width: 330px;
+    width: 225px;
   }
   .front #search-wrapper .form-group {
     margin: 0;
@@ -311,15 +308,15 @@ a {
 .front #page #content-top-second-wrapper:before {
   display: none;
 }
-.front #search-wrapper h2.block-title {
-  text-align-last: center;
+#search-wrapper h2.block-title {
   color: #3C9EAB;
   font-size: 24px;
   background-color: white;
-  margin: 0px auto 160px auto;
+  margin: 0px auto 110px auto;
   width: 450px;
+  text-align: center;
 }
-.front #search-wrapper p {
+#search-wrapper p {
   text-align-last: center;
 }
 .collapse {
