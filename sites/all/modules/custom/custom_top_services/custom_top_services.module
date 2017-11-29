@@ -136,6 +136,9 @@ function custom_top_services_form_alter(&$form, &$form_state, $form_id) {
       $form['submit']['#disabled'] = TRUE;
     }
   }
+  if ($form_id == 'search_api_page_search_form_services') {
+    $form['submit_1']['#value'] = 'НАЙТИ';
+  }
 }
 
 function _three_month_subscribe($form, &$form_state) {
@@ -147,8 +150,8 @@ function _three_month_subscribe($form, &$form_state) {
  * Implements hook_user_logout().
  */
 function custom_top_services_user_logout($account) {
-global $user;
-    // Load the anonymous user
+  global $user;
+  // Load the anonymous user
   $user = drupal_anonymous_user();
-    drupal_goto($_SERVER['HTTP_REFERER']);
+  drupal_goto($_SERVER['HTTP_REFERER']);
 }
