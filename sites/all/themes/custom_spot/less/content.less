@@ -113,7 +113,9 @@ a {
   padding: 0;
   background-size: cover;
   background-position: top;
-  max-height: 300px;
+  height: 300px;
+  position: relative;
+  margin-bottom: 85px;
   form#search-api-page-search-form-services {
     margin: 0 auto;
     width: 50%;
@@ -127,6 +129,16 @@ a {
       :hover {
         border-color: #3C9EAB;
       }
+    }
+  }
+  #block-search-api-page-services{
+    position: initial;
+    .content-wrapper{
+      position: absolute;
+      width: 670px;
+      left: 50%;
+      margin-left: -365px;
+      bottom: -115px;
     }
   }
 }
@@ -150,6 +162,13 @@ a {
       margin: 0px auto 70px auto;
       width: 330px;
     }
+    form#search-api-page-search-form-services {
+      margin: 70px auto;
+    }
+  }
+
+  #content-top-first-wrapper {
+    margin: 40px auto;
   }
 }
 
@@ -180,10 +199,24 @@ a {
 
   .front #search-wrapper form#search-api-page-search-form-services button {
     font-size: 14px;
+    margin: 25px auto;
   }
+
+  #content-top-first-wrapper {
+    margin: 80px auto;
+    #content-top-first ul.menu li {
+      display: block;
+      margin: 0px auto;
+      width: 150px;
+      padding: 5px;
+      text-align: center;
+    }
+  }
+
 }
 
 #content-top-first-wrapper {
+  margin: 40px auto;
   padding: 0;
 }
 

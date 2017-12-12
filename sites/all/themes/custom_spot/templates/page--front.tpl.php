@@ -97,13 +97,11 @@
 <?php if ($page['search']) : ?>
     <div id="search-wrapper" class="clearfix">
         <div class="container">
-            <div class="col-md-12">
                 <div id="search-region" class="clearfix">
                     <div id="navbar-search-collapse">
                       <?php print render($page['search']); ?>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 <?php endif; ?>
